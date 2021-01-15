@@ -1,0 +1,42 @@
+title: Piemonte's 블로그
+author: piemonte93
+email: b07882002@gmail.com
+description: > # this means to ignore newlines until "show_exerpts:"
+  개발 일지와 여러가지 이야기..
+show_excerpts: true # set to true to show excerpts on the homepage
+baseurl: ""
+url: "https://piemonte93.github.io"
+
+# Minima date format
+# refer to http://shopify.github.io/liquid/filters/date/ if you want to customize this
+sass:
+  sass_dir: _sass
+
+permalink: /posts/:title/
+texture:
+  title: Piemonte
+  tagline: Developer
+  date_format: "%b %-d, %Y"
+  style: black
+  showNav: false
+  showPicker: true
+
+  # generate social links in footer
+  social_links:
+    twitter: thelehhman
+    github: thelehhman
+    linkedIn: in/thelehhman
+    rss: rss
+
+# If you want to link only specific pages in your header, uncomment
+# this and add the path to the pages in order as they should show up
+#header_pages:
+# - about.md
+
+# Build settings
+remote_theme: thelehhman/texture
+theme: texture
+
+plugins:
+  - jekyll-seo-tag
+#  - jekyll-feed
