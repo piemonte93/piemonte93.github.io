@@ -16,7 +16,7 @@ permalink: /posts/:title/
 texture:
   title: Piemonte
   tagline: Developer
-  date_format: "%b %-d, %Y"
+  date_format: "%y, %b %-d"
   style: black
   showNav: true
   showPicker: true
