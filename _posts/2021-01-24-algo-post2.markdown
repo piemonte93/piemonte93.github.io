@@ -45,7 +45,7 @@ print('{0:X}'.format(11))
 -> B
 ```
 
-포메팅은 [이 문서][link1] 참고
+포메팅은 [이 문서][link-1] 참고
 
 ---포메팅
 
@@ -95,4 +95,4 @@ ord('A')
 # ABCDEFGHIJ KLMNOPQRST UVWXYZ
 ```
 
-[link1]: www.w3schools.com/python/ref_string_format.asp
+[link-1]: https://www.w3schools.com/python/ref_string_format.asp
