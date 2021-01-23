@@ -16,7 +16,7 @@ memo = [0] * n
 
 다이나믹 프로그래밍이나 개수 제한이 문제에 있는 경우 배열을 만들어 놓고 문제에 접근 할 때 좋다.
 
-2진수, 8진수, 10진수, 16진수 문제
+---2진수, 8진수, 10진수, 16진수 문제
 
 'a'를 10진수로 변환 해주는 예제
 
@@ -45,9 +45,9 @@ print('{0:X}'.format(11))
 -> B
 ```
 
-www.w3schools.com/python/ref_string_format.asp 포메팅은 이 문서 참고
+포메팅은 [이 문서][link1] 참고
 
-포메팅
+---포메팅
 
 ```python
 print('{0:02d}'.format(8))
@@ -94,3 +94,5 @@ ord('A')
 
 # ABCDEFGHIJ KLMNOPQRST UVWXYZ
 ```
+
+[link1]: www.w3schools.com/python/ref_string_format.asp
