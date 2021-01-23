@@ -21,10 +21,10 @@ texture:
   showNav: true
   showPicker: true
   navigation:
-    - title: My Work
-      url: "/my-work"
-    - title: Resume
-      url: "/resume"
+    - title: Algorithm
+      url: "/algorithm"
+    - title: FrontEnd
+      url: "/front-end"
 
   # generate social links in footer
   social_links:
