@@ -24,7 +24,7 @@ texture:
     - title: Algorithm
       url: "/algorithm"
     - title: FrontEnd
-      url: "/front-end"
+      url: "/front-end/"
     - title: BackEnd
       url: "/back-end"
     - title: 잡담
