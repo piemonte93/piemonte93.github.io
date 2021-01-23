@@ -3,7 +3,7 @@ layout: page
 ---
 
 <ul class="posts">
-  {%- for post in site.posts -%} {%- if site.posts.categories == Algorithm -%}
+  {%- for post in site.posts -%} {%- if post.categories == Algorithm -%}
   <li>
     {%- assign date_format = site.minima.date_format | default: "%Y, %b %-d" -%}
     <div class="post-meta">
