@@ -2,6 +2,7 @@
 layout: page
 ---
 
+{%- if site.posts.size > 0 -%}
 <ul class="posts">
   {%- for post in site.posts -%} {%- for category in post.categories -%} {%- if
   category==Algorithm -%}
@@ -21,3 +22,4 @@ layout: page
   </li>
   {%- endif -%} {%- endfor -%} {%- endfor -%}
 </ul>
+{%- endif -%}
