@@ -3,15 +3,12 @@ layout: page
 ---
 
 <ul class="posts">
-  {%- for post in site.posts -%} {%- if page.categories == Algorithm -%}
+  {%- for category in site.posts.categories -%} {%- if category == Algorithm -%}
   <li>
     {%- assign date_format = site.minima.date_format | default: "%Y, %b %-d" -%}
     <div class="post-meta">
       <a class="post-link" href="{{ post.url | relative_url }}">
         <h2 class="post-title">{{ post.title | escape }}</h2>
-        {%- for tags in post.categories -%}
-        <h3>{{tags}}</h3>
-        {%- endfor -%}
       </a>
       <div class="post-date">
         <i class="icon-calendar"></i>{{ post.date | date: date_format }}
