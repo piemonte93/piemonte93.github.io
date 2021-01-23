@@ -31,6 +31,9 @@ a {
   color: $linkColor;
   text-decoration: none;
   transition: border-bottom 0.4s;
+  &:hover {
+    border-bottom: 0.5px solid $linkColor;
+  }
 }
 
 h1,
