@@ -3,9 +3,8 @@ layout: page
 ---
 
 <ul class="posts">
-  {%- for post in site.posts -%} {%- for category in post.categories -%}
-  <li>{{category}}</li>
-  {%- endfor -%}
+  {%- for post in site.posts -%} {%- for category in post.categories -%} {%- if
+  category==Algorithm -%}
   <li>
     {%- assign date_format = site.minima.date_format | default: "%Y, %b %-d" -%}
     <div class="post-meta">
@@ -20,5 +19,5 @@ layout: page
       {%- if site.show_excerpts -%} {{ post.excerpt }} {%- endif -%}
     </div>
   </li>
-  {%- endfor -%}
+  {%- endif -%} {%- endfor -%} {%- endfor -%}
 </ul>
