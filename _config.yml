@@ -23,9 +23,11 @@ texture:
   navigation:
     - title: Algorithm
       url: "/algorithm"
-    - title: FrontEnd
+    - title: CS
+      url: "/cs"
+    - title: Front-End
       url: "/front-end/"
-    - title: BackEnd
+    - title: Back-End
       url: "/back-end"
     - title: 잡담
       url: "/talk"
