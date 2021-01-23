@@ -12,7 +12,7 @@ url: "https://piemonte93.github.io"
 sass:
   sass_dir: _sass
 
-permalink: /:url/:title/
+permalink: /posts/:title/
 texture:
   title: Piemonte
   tagline: Developer
