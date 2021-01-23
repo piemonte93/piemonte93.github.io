@@ -35,7 +35,7 @@ texture:
   # generate social links in footer
   social_links:
     twitter: thelehhman
-    github: thelehhman
+    github: https://github.com/piemonte93
     linkedIn: in/thelehhman
     rss: rss
 
