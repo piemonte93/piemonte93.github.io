@@ -10,7 +10,7 @@ layout: page
       <a class="post-link" href="{{ post.url | relative_url }}">
         <h2 class="post-title">{{ post.title | escape }}</h2>
         {%- for tags in post.categories -%}
-        <h3>tag</h3>
+        <h3>{{tag}}</h3>
         {%- endfor -%}
       </a>
       <div class="post-date">
