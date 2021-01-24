@@ -22,15 +22,15 @@ texture:
   showPicker: true
   navigation:
     - title: Algorithm
-      url: "/algorithm"
+      url: "/algorithm/"
     - title: CS
-      url: "/cs"
+      url: "/cs/"
     - title: Front-End
       url: "/front-end/"
     - title: Back-End
-      url: "/back-end"
+      url: "/back-end/"
     - title: 잡담
-      url: "/talk"
+      url: "/talk/"
 
   # generate social links in footer
   social_links:
