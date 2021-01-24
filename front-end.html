@@ -2,7 +2,13 @@
 layout: page
 ---
 
-{%- if site.posts.size > 0 -%}
+{%- if site.posts.size == 0 -%}
+<ul class="posts">
+  <li>
+    <h2>작성된 포스트가 없습니다.</h2>
+  </li>
+</ul>
+{%- endif -%} {%- if site.posts.size > 0 -%}
 <ul class="posts">
   {%- for post in site.posts -%} {%- for category in post.categories -%} {%- if
   category == "Front-End" -%}
