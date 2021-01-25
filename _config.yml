@@ -19,7 +19,7 @@ texture:
   date_format: "%y, %b %-d"
   style: black
   showNav: true
-  showPicker: true
+  showPicker: false
   navigation:
     - title: Algorithm
       url: "/algorithm/"
