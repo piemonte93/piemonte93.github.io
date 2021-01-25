@@ -25,8 +25,6 @@ texture:
       url: "/algorithm/"
     - title: CS
       url: "/cs/"
-    - title: Python
-      url: "/Python/"
     - title: Front-End
       url: "/front-end/"
     - title: Back-End
