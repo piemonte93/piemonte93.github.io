@@ -2,7 +2,7 @@
 layout: post
 title: "고정점 찾기 (이진 탐색)"
 description: "풀이시간 20분 , 시간제한 1초, 메모리제한 128MB, 출처 Amazon 인터뷰 (취코테 368p)"
-date: 2021-02-04 08:22:36 +0530
+date: 2021-02-04 03:57:38 +0530
 categories: Algorithm Python
 ---
 
