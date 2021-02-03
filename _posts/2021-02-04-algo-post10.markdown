@@ -2,7 +2,7 @@
 layout: post
 title: "정렬된 배열에서 특정 수의 개수 구하기 (이진 탐색)"
 description: "풀이시간 30분 , 시간제한 1초, 메모리제한 128MB, 출처 Zoho 인터뷰 (취코테 367p)"
-date: 2021-02-04 08:18:36 +0530
+date: 2021-02-04 08:20:36 +0530
 categories: Algorithm Python
 ---
 
