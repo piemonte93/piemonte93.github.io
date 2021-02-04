@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "공유기 설치 - 백준 2110번 (이진 탐색, 파라메트릭 서치)"
+title: "공유기 설치 - 백준 2110번 (이진 탐색, 파라메트릭 서치)"
 description: "풀이시간 50분 , 시간제한 2초, 메모리제한 128MB, 백준 2110 (취코테 369p)"
 date: 2021-02-04 03:57:39 +0530
 categories: Algorithm Python
