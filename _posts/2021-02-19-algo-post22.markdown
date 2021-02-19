@@ -11,7 +11,5 @@ categories: Algorithm Python
 이를 점화식으로 나타내면 다음과 같다.<br>
 
 ```
-<p>
   dp[i][j] = arr[i][j] + max(dp[i - 1][j - 1], dp[i][j - 1], dp[i + 1][j - 1])
-</p>
 ```
