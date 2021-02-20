@@ -6,6 +6,8 @@ date: 2021-01-27 08:18:36 +0530
 tags: Algorithm Python
 ---
 
+<br>
+
 [국영수 - 백준 10825번][baek10825]
 
 <br>
