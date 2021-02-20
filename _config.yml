@@ -20,17 +20,17 @@ texture:
   style: black
   showNav: true
   showPicker: false
-  navigation:
-    - title: Algorithm
-      url: "/algorithm/"
-    - title: CS
-      url: "/cs/"
-    - title: Front-End
-      url: "/front-end/"
-    - title: Back-End
-      url: "/back-end/"
-    - title: 잡담
-      url: "/talk/"
+  # navigation:
+  #   - title: Algorithm
+  #     url: "/algorithm/"
+  #   - title: CS
+  #     url: "/cs/"
+  #   - title: Front-End
+  #     url: "/front-end/"
+  #   - title: Back-End
+  #     url: "/back-end/"
+  #   - title: 잡담
+  #     url: "/talk/"
 
   # generate social links in footer
   social_links:
