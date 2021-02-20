@@ -1,42 +1,54 @@
 ---
 layout: page
 ---
+
 {%- if site.posts.size > 0 -%}
 <ul class="posts">
-	{%- for post in site.posts -%}
-	<li>
-		{%- assign date_format = site.texture.date_format -%}
-		<div class="post-meta">
-			<a class="post-link" href="{{ post.url | relative_url }}">
-				<h2 class="post-title">{{ post.title | escape }}</h2>
-			</a>
-		</div>
-		<div class="post-tag">
-			<ul class="post-tag-container">
-				{%- for tag in post.tags -%}
-					{%- if tag == "blog" -%}
-					<li style="background-color: #ffd60a;"><a href="{{ site.baseurl }}/tags/{{ tag }}">{{ tag }}</a></li>
-					{%- elsif tag == "CocoaPods" or tag == "dependency" -%}
-					<li style="background-color: #5856d6;"><a href="{{ site.baseurl }}/tags/{{ tag }}">{{ tag }}</a></li>
-					{%- elsif tag == "Swift" -%}
-    				<li style="background-color: #FD2020;"><a href="{{ site.baseurl }}/tags/{{ tag }}">{{ tag }}</a></li>
-					{%- else -%}
-					<li><a href="{{ site.baseurl }}/tags/{{ tag }}">{{ tag }}</a></li>
-					{%- endif -%}
-				{%- endfor -%}
-			</ul>
-			<div class="post-date">Published on {{ post.date | date: date_format }}</div>
-		</div>	
-		<div class="post">
-			{%- if site.show_excerpts -%}
-				{% assign categories = post.categories %}
-				{%- unless categories contains 'Tips' -%}
-					{{ post.excerpt }}
-				{%- endunless -%}
-			{%- endif -%}
-		</div>
-	</li>
-	{%- endfor -%}
+  {%- for post in site.posts -%}
+  <li>
+    {%- assign date_format = site.texture.date_format -%}
+    <div class="post-meta">
+      <a class="post-link" href="{{ post.url | relative_url }}">
+        <h2 class="post-title">{{ post.title | escape }}</h2>
+      </a>
+    </div>
+    <div class="post-tag">
+      <ul class="post-tag-container">
+        {%- for tag in post.tags -%} {%- if tag == "Front-End" or tag ==
+        "Javascript" -%}
+        <li style="background-color: #ffd60a">
+          <a href="{{ site.baseurl }}/tags/{{ tag }}">{{ tag }}</a>
+        </li>
+        {%- elsif tag == "React.js" or tag == "SPA"-%}
+        <li style="background-color: #72c1e3">
+          <a href="{{ site.baseurl }}/tags/{{ tag }}">{{ tag }}</a>
+        </li>
+        {%- elsif tag == "Python" or tag == "Flask" or tag == "Django" -%}
+        <li style="background-color: #5856d6">
+          <a href="{{ site.baseurl }}/tags/{{ tag }}">{{ tag }}</a>
+        </li>
+        {%- elsif tag == "Node.js" -%}
+        <li style="background-color: #78b85c">
+          <a href="{{ site.baseurl }}/tags/{{ tag }}">{{ tag }}</a>
+        </li>
+        {%- elsif tag == "Algorithm" or tag == "CS" -%}
+        <li style="background-color: #fd2020">
+          <a href="{{ site.baseurl }}/tags/{{ tag }}">{{ tag }}</a>
+        </li>
+        {%- else -%}
+        <li><a href="{{ site.baseurl }}/tags/{{ tag }}">{{ tag }}</a></li>
+        {%- endif -%} {%- endfor -%}
+      </ul>
+      <div class="post-date">
+        Published on {{ post.date | date: date_format }}
+      </div>
+    </div>
+    <div class="post">
+      {%- if site.show_excerpts -%} {% assign categories = post.categories %}
+      {%- unless categories contains 'Tips' -%} {{ post.excerpt }} {%- endunless
+      -%} {%- endif -%}
+    </div>
+  </li>
+  {%- endfor -%}
 </ul>
 {%- endif -%}
-
