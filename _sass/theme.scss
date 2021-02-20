@@ -120,6 +120,9 @@ header {
 }
 
 #profile {
+  a:hover {
+    text-decoration: none;
+  }
   width: 230px;
   height: 230px;
   border-radius: 50%;
