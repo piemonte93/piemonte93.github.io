@@ -16,6 +16,7 @@ sass:
 texture:
   title: Piemonte
   tagline: Web Developer
+  description: Always try to solve problem
   date_format: "%y, %b %-d"
   style: black
   showNav: true
