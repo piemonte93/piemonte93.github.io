@@ -6,10 +6,10 @@ layout: page
 {% assign tag_words = site_tags | split:',' | sort %}
 <!-- tag_words: {{ tag_words }} -->
 {% capture this_word %}{{ page.title }}{% endcapture %}
-{%- if page.category == "blog" -%}
-<div class="page-tag-header-blog">
-{%- elsif page.category == "dependency" -%}
-<div class="page-tag-header-dependency">
+{%- if page.category == "Algorithm" -%}
+<div class="page-tag-header-algorithm">
+{%- elsif page.category == "Back-End" -%}
+<div class="page-tag-header-backend">
 {%- else -%}
 <div class="page-tag-header-default">
 {%- endif -%}
@@ -26,8 +26,8 @@ layout: page
                 <div class="post-date"><i class="icon-calendar"></i>{{ post.date | date: "%B %d, %Y" }}</div>
             </div>
             <div class="post-tag">
-                {%- if page.category == "blog" -%}
-                <ul class="post-tag-container-blog">
+                {%- if page.category == "Algorithm" -%}
+                <ul class="post-tag-container-algorithm">
                 {%- else -%}
                 <ul class="post-tag-container">
                 {%- endif -%}
