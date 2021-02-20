@@ -1,0 +1,42 @@
+---
+layout: page
+---
+
+{% capture site_tags %}{% for tag in site.tags %}{{ tag | first }}{% unless
+forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
+<!-- site_tags: {{ site_tags }} -->
+{% assign tag_words = site_tags | split:',' | sort %}
+<!-- tag_words: {{ tag_words }} -->
+
+<h1>Tags</h1>
+<h3>Tag List</h3>
+
+<div id="tags">
+  <ul class="tags-tag-container">
+    {% for item in (0..site.tags.size) %}{% unless forloop.last %} {% capture
+    this_word %}{{ tag_words[item] | strip_newlines }}{% endcapture %} {%- if
+    this_word == "Front-End" or this_word = "Javascript" -%}
+    <li style="background-color: #ffd60a">
+      <a href="{{ site.baseurl }}/tags/{{ tag }}">{{ tag }}</a>
+    </li>
+    {%- elsif this_word == "React.js" or this_word == "SPA"-%}
+    <li style="background-color: #72c1e3">
+      <a href="{{ site.baseurl }}/tags/{{ tag }}">{{ tag }}</a>
+    </li>
+    {%- elsif this_word == "Python" or this_word == "Flask" -%}
+    <li style="background-color: #5856d6">
+      <a href="{{ site.baseurl }}/tags/{{ tag }}">{{ tag }}</a>
+    </li>
+    {%- elsif this_word == "Node.js" -%}
+    <li style="background-color: #78b85c">
+      <a href="{{ site.baseurl }}/tags/{{ tag }}">{{ tag }}</a>
+    </li>
+    {%- elsif this_word == "Algorithm" or this_word == "CS" -%}
+    <li style="background-color: #fd2020">
+      <a href="{{ site.baseurl }}/tags/{{ tag }}">{{ tag }}</a>
+    </li>
+    {%- else -%}
+    <li><a href="{{ site.baseurl }}/tags/{{ tag }}">{{ tag }}</a></li>
+    {%- endif -%} {% endunless %}{% endfor %}
+  </ul>
+</div>
