@@ -2,7 +2,8 @@
 layout: page
 ---
 
-{% capture site_tags %}{% for tag in site.tags %}{{ tag | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
+{% capture site_tags %}{% for tag in site.tags %}{{ tag | first }}{% unless
+forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
 <!-- site_tags: {{ site_tags }} -->
 {% assign tag_words = site_tags | split:',' | sort %}
 <!-- tag_words: {{ tag_words }} -->
@@ -12,15 +13,33 @@ layout: page
 
 <div id="tags">
   <ul class="tags-tag-container">
-    {% for item in (0..site.tags.size) %}{% unless forloop.last %}
-    {% capture this_word %}{{ tag_words[item] | strip_newlines }}{% endcapture %}
-    {%- if this_word == "blog" -%}
-    <li style="background-color: #FF3B30;"><a href="{{ site.baseurl }}/tags/{{ this_word }}">{{ this_word }}</a></li>
-    {%- elsif this_word == "CocoaPods" or this_word == "dependency" -%}
-    <li style="background-color: #5856d6;"><a href="{{ site.baseurl }}/tags/{{ this_word }}">{{ this_word }}</a></li>
+    {% for item in (0..site.tags.size) %}{% unless forloop.last %} {% capture
+    this_word %}{{ tag_words[item] | strip_newlines }}{% endcapture %} {%- if
+    this_word == "Front-End" or this_word == "Javascript" -%}
+    <li style="background-color: #ffd60a">
+      <a href="{{ site.baseurl }}/tags/{{ this_word }}">{{ this_word }}</a>
+    </li>
+    {%- elsif this_word == "React.js" or this_word == "SPA" -%}
+    <li style="background-color: #72c1e3">
+      <a href="{{ site.baseurl }}/tags/{{ this_word }}">{{ this_word }}</a>
+    </li>
+    {%- elsif this_word == "Python" or this_word == "Flask" or this_word ==
+    "Django" -%}
+    <li style="background-color: #5856d6">
+      <a href="{{ site.baseurl }}/tags/{{ this_word }}">{{ this_word }}</a>
+    </li>
+    {%- elsif this_word == "Node.js" -%}
+    <li style="background-color: #78b85c">
+      <a href="{{ site.baseurl }}/tags/{{ this_word }}">{{ this_word }}</a>
+    </li>
+    {%- elsif this_word == "Algorithm" or this_word == "CS" -%}
+    <li style="background-color: #fd2020">
+      <a href="{{ site.baseurl }}/tags/{{ this_word }}">{{ this_word }}</a>
+    </li>
     {%- else -%}
-    <li><a href="{{ site.baseurl }}/tags/{{ this_word }}">{{ this_word }}</a></li>
-    {%- endif -%}
-    {% endunless %}{% endfor %}
+    <li>
+      <a href="{{ site.baseurl }}/tags/{{ this_word }}">{{ this_word }}</a>
+    </li>
+    {%- endif -%} {% endunless %}{% endfor %}
   </ul>
 </div>
