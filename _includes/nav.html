@@ -1,6 +1,8 @@
 {%- if site.texture.showNav -%}
 <div class="navbar">
 	<ul>
+		<li><a href="/">Home</a></li>
+		<li><a href="/tags.html">Tags</a></li>
 		{% for link in site.texture.navigation %}
 		<a href="{{ link.url | prepend:site.baseurl }}"><li {% if link.url == page.url %}class="active"{% endif %} >{{ link.title }}</li></a>
 		{% endfor %}
