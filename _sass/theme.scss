@@ -120,12 +120,13 @@ header {
 }
 
 #profile {
-  a:hover {
-    text-decoration: none;
-  }
   width: 230px;
   height: 230px;
   border-radius: 50%;
+}
+
+#profile_link:hover {
+  text-decoration: none;
 }
 
 .clearfix {
