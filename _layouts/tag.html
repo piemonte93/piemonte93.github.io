@@ -11,7 +11,20 @@ layout: page
 {%- else -%}
 <div class="page-tag-header-default">
 {%- endif -%}
-<h1>Post tagged with <span>{{ this_word }}</span></h1>
+<h1>Post tagged with 
+    {%- if this_word == "Front-End" or this_word == "Javascript"}
+    <span style="background-color: #ffd60a;">{{ this_word }}</span>
+    {%- elsif this_word == "React.js" or this_word == "SPA"}
+    <span style="background-color: #72c1e3;">{{ this_word }}</span>
+    {%- elsif this_word == "Python" or this_word == "Django" or this_word == "Flask"}
+    <span style="background-color: #5856d6;">{{ this_word }}</span>
+    {%- elsif this_word == "Node.js"}
+    <span style="background-color: #78b85c;">{{ this_word }}</span>
+    {%- elsif this_word == "Algorithm" or this_word == "CS"}
+    <span style="background-color: #fd2020;">{{ this_word }}</span>
+    {%- else -%}
+    <span>{{ this_word }}</span>
+</h1>
 </div>
 <div class="page-tag-content">
     <ul class="page-tag-post">
