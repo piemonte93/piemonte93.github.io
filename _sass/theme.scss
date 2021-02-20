@@ -12,6 +12,16 @@ $leftWidth: 220px;
 $gray: #999;
 $lightGray: #eee;
 
+$blue: #007aff;
+$green: #34c759;
+$indigo: #5856d6;
+$orange: #ff9500;
+$pink: #ff2d55;
+$purple: #af52de;
+$red: #ff3b30;
+$teal: #5ac8fa;
+$yellow: #ffcc00;
+
 *,
 *:before,
 *:after {
@@ -32,8 +42,7 @@ a {
   text-decoration: none;
   transition: border-bottom 0.4s;
   &:hover {
-    text-decoration: none;
-    color: blue;
+    border-bottom: 0.5px solid $linkColor;
   }
 }
 
@@ -49,12 +58,23 @@ h1 {
 
 h2 {
   font-weight: bold;
+  margin: 50px 0px 5px 0px;
   @include fluidType(28px, 32px);
+}
+
+h3 {
+  margin: 50px 0px 5px 0px;
+  @include fluidType(24px, 24px);
 }
 
 h4 {
   font-weight: normal;
   @include fluidType(18px, 20px);
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 30px;
 }
 
 figcaption {
@@ -65,7 +85,8 @@ figcaption {
 
 header {
   // background-size: cover;
-  padding: 120px 0;
+  //padding: 120px 0;
+  padding: 75px 0;
   color: #fff;
   overflow: hidden;
   h2 {
@@ -97,11 +118,13 @@ header {
     }
   }
 }
+
 #profile {
   width: 230px;
   height: 230px;
   border-radius: 50%;
 }
+
 .clearfix {
   clear: both;
 }
@@ -110,50 +133,54 @@ header {
 // Basic Container Class
 //
 .container {
-  margin: 0 150px;
-  max-width: 800px;
+  margin: 0 auto;
+  max-width: 920px;
 
   div.highlighter-rouge {
-    right: 150px;
+    //right: 150px;
   }
 
   @media screen and (max-width: $mobileWidth) {
     margin: 0 15px;
     div.highlighter-rouge {
-      right: 15px;
+      //right: 15px;
     }
     div.highlight {
-      padding: 30px 15px;
+      // padding: 30px 15px;
+      padding: 15px 20px;
     }
   }
 
   @media screen and (max-width: $tabWidth) and (min-width: $mobileWidth) {
     margin: 0 40px;
     div.highlighter-rouge {
-      right: 40px;
+      //right: 40px;
     }
     div.highlight {
-      padding: 30px 40px;
+      // padding: 30px 40px;
+      padding: 15px 20px;
     }
   }
 
   @media screen and (max-width: $desktopWidth) and (min-width: $tabWidth) {
     margin: 0 80px;
     div.highlighter-rouge {
-      right: 80px;
+      //right: 80px;
     }
     div.highlight {
-      padding: 30px 80px;
+      // padding: 30px 80px;
+      padding: 15px 20px;
     }
   }
 
   @media screen and (min-width: $desktopWidth) and (max-width: 1280px) {
     margin: 0 100px;
     div.highlighter-rouge {
-      right: 100px;
+      //right: 100px;
     }
     div.highlight {
-      padding: 30px 100px;
+      // padding: 30px 100px;
+      padding: 15px 20px;
     }
   }
 }
@@ -178,6 +205,7 @@ header {
 
 .post-date {
   color: $gray;
+  margin-left: 5px;
   .icon-calendar {
     margin-right: 6px;
   }
@@ -188,11 +216,11 @@ header {
   padding: 0;
   li {
     float: left;
-    padding: 10px 20px;
+    padding: 10px 15px;
     background-color: $lightGray;
     color: #000;
     margin: 5px;
-    border-radius: 2px;
+    border-radius: 6px;
     @include fluidType(15px, 17px);
     &:first-child {
       margin-left: 0;
@@ -215,20 +243,108 @@ header {
 .posts,
 .post-container {
   margin-top: 40px;
+  margin-bottom: 125px;
 }
 
 .post-meta {
-  display: flex;
-  justify-content: space-between;
+  // display: flex;
+  // justify-content: space-between;
   align-items: center;
   a:hover {
     border-bottom: none;
+  }
+
+  @media screen and (max-width: $mobileWidth) {
+    display: block;
+  }
+}
+
+.post-tag {
+  margin-top: 5px;
+  display: inline-block;
+  width: 85%;
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+.post-tag-container {
+  list-style-type: none;
+  padding: 0;
+  li {
+    font-size: 9px;
+    float: left;
+    padding: 5px 10px;
+    background-color: $blue;
+    color: #fff;
+    margin: 5px;
+    border-radius: 16px;
+    @include fluidType(15px, 17px);
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+  a {
+    color: #fff;
+    text-decoration: none;
+    border-bottom: 0;
+  }
+}
+
+.post-tag-container-blog {
+  list-style-type: none;
+  padding: 0;
+  li {
+    font-size: 9px;
+    float: left;
+    padding: 5px 10px;
+    background-color: $red;
+    color: #fff;
+    margin: 5px;
+    border-radius: 16px;
+    @include fluidType(15px, 17px);
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+  a {
+    color: #fff;
+    text-decoration: none;
+    border-bottom: 0;
+  }
+}
+
+.post-tag-container-dependency {
+  list-style-type: none;
+  padding: 0;
+  li {
+    font-size: 9px;
+    float: left;
+    padding: 5px 10px;
+    background-color: $indigo;
+    color: #fff;
+    margin: 5px;
+    border-radius: 16px;
+    @include fluidType(15px, 17px);
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+  a {
+    color: #fff;
+    text-decoration: none;
+    border-bottom: 0;
   }
 }
 
 .post-container {
   img {
-    margin: 20px 0;
+    // margin: 20px 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    // width: 75%;
   }
 }
 
@@ -240,11 +356,15 @@ header {
   a {
     color: inherit;
   }
+  a:hover {
+    border-bottom: 0;
+  }
   ul {
     list-style-type: none;
     li {
+      display: inline-block;
       // background-color: #ff9f1c;
-      border: 1px solid #fff;
+      // border: 1px solid #fff;
       float: left;
       // margin: 5px;
       &:not(:first-child) {
@@ -262,5 +382,122 @@ header {
         background-color: rgba(#fff, 0.15);
       }
     }
+  }
+}
+
+.tags-tag-container {
+  list-style-type: none;
+  padding: 0;
+  li {
+    font-size: 9px;
+    float: left;
+    padding: 5px 10px;
+    background-color: $blue;
+    color: #fff;
+    margin: 5px;
+    border-radius: 16px;
+    @include fluidType(15px, 17px);
+    &:first-child {
+      margin-left: 0;
+    }
+
+    a {
+      color: #fff;
+      text-decoration: none;
+      border-bottom: 0;
+    }
+  }
+}
+
+.page-tag-header-default {
+  span {
+    padding: 5px 15px;
+    background-color: $blue;
+    color: #fff;
+    margin: 5px;
+    border-radius: 26px;
+    @media screen and (max-width: $mobileWidth) {
+      display: inline-block;
+    }
+    @media screen and (max-width: $tabWidth) and (min-width: $mobileWidth) {
+      display: inline-block;
+    }
+  }
+}
+
+.page-tag-header-blog {
+  span {
+    padding: 5px 15px;
+    background-color: $red;
+    color: #fff;
+    margin: 5px;
+    border-radius: 26px;
+    @media screen and (max-width: $mobileWidth) {
+      display: inline-block;
+    }
+    @media screen and (max-width: $tabWidth) and (min-width: $mobileWidth) {
+      display: inline-block;
+    }
+  }
+}
+
+.page-tag-header-dependency {
+  span {
+    padding: 5px 15px;
+    background-color: $indigo;
+    color: #fff;
+    margin: 5px;
+    border-radius: 26px;
+    @media screen and (max-width: $mobileWidth) {
+      display: inline-block;
+    }
+    @media screen and (max-width: $tabWidth) and (min-width: $mobileWidth) {
+      display: inline-block;
+    }
+  }
+}
+
+.page-tag-post {
+  padding: 0;
+
+  li.page-tag-post-list {
+    list-style-type: none;
+    padding: 20px;
+    background-color: rgb(242, 242, 247);
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+.page-tag-post-title {
+  a {
+    font-size: 32px;
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+    border-bottom: 0;
+  }
+}
+
+.page-tag-post-date {
+  float: right;
+  color: $gray;
+  .icon-calendar {
+    margin-right: 6px;
+  }
+}
+
+blockquote {
+  background: #ebebeb;
+  color: black;
+  border-left: 5px solid #1c1c1e;
+  padding: 1.2em 1.5em;
+  margin: 0;
+  margin-bottom: 1em;
+  p {
+    margin: 0;
+  }
+  content {
+    word-break: break-word;
   }
 }
