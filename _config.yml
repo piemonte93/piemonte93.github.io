@@ -15,7 +15,7 @@ sass:
 # permalink: /posts/:title/
 texture:
   title: Piemonte
-  tagline: Developer
+  tagline: Web Developer
   date_format: "%y, %b %-d"
   style: black
   showNav: true
