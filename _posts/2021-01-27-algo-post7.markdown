@@ -3,7 +3,7 @@ layout: post
 title: "국영수 (정렬) - 백준 10825번"
 description: "풀이시간 20분 , 시간제한 1초, 메모리제한 256MB, 백준 10825번"
 date: 2021-01-27 08:18:36 +0530
-categories: Algorithm Python
+tags: Algorithm Python
 ---
 
 [국영수 - 백준 10825번][baek10825]

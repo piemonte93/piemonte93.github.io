@@ -3,7 +3,7 @@ layout: post
 title: "떡볶이 떡 만들기 (이진 탐색, 파라메트릭 서치)"
 description: "풀이시간 40분 , 시간제한 2초, 메모리제한 128MB (취코테 with Python 201p)"
 date: 2021-02-04 03:57:36 +0530
-categories: Algorithm Python
+tags: Algorithm Python
 ---
 
 이 문제는 떡을 자르는 절단기 높이 H를 1씩 증가시켜서 탐색을 하면 각 개별의 떡의 길이가 10억 이하이므로 시간초과를 할수밖에 없다. 따라서 이진탐색으로 범위를 줄여가며 높이 H의 탐색을 해야한다.<br>

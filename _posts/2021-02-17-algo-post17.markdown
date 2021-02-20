@@ -3,7 +3,7 @@ layout: post
 title: "감시 피하기 - BOJ 18428"
 description: "풀이시간 60분 , 시간제한 2초, 메모리제한 256MB, BOJ 18428 (취코테 346p)"
 date: 2021-02-17 07:12:40 +0530
-categories: Algorithm Python
+tags: Algorithm Python
 ---
 
 <br>

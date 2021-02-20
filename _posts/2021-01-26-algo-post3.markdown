@@ -3,7 +3,7 @@ layout: post
 title: "음료수 얼려먹기 (DFS)"
 description: "풀이시간 30분 , 시간제한 1초, 메모리제한 128MB (취코테 with 파이썬 149p 실전문제)"
 date: 2021-01-26 08:18:36 +0530
-categories: Algorithm Python
+tags: Algorithm Python
 ---
 
 얼릴수 있는 공간이 상하좌우로 연결될 수 있으므로 그래프 형태로 모델링이 가능하다. 여기서는 그래프에서 0인 노드를 묶어서 갯수를 출력하면 되고 이는 DFS로 구현 가능하다.<br><br>

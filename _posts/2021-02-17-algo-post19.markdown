@@ -3,7 +3,7 @@ layout: post
 title: "경쟁적 전염 - BOJ 18405"
 description: "풀이시간 50분 , 시간제한 1초, 메모리제한 256MB, BOJ 18405 (취코테 344p)"
 date: 2021-02-17 16:38:40 +0530
-categories: Algorithm Python
+tags: Algorithm Python
 ---
 
 <br>

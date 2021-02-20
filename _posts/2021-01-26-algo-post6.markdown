@@ -3,7 +3,7 @@ layout: post
 title: "왕실의 나이트 (구현)"
 description: "풀이시간 20분 , 시간제한 1초, 메모리제한 128MB (취코테 with Python 115p 실전문제)"
 date: 2021-01-26 08:18:36 +0530
-categories: Algorithm Python
+tags: Algorithm Python
 ---
 
 이 문제를 풀때 아스키 코드를 이용하여 알파벳을 숫자로 치환하는 것을 생각 못했다. 그래서 알파벳을 순서대로 저장한 배열을 만들어 해당배열의 인덱스 값을 x값으로 둬서 숫자로 바꾸고 y는 두번째로 입력받은 값을 저장하도록 해결하였다.<br>

@@ -3,7 +3,7 @@ layout: post
 title: "괄호 변환 - 2020 카카오 블라인드"
 description: "풀이시간 20분 , 시간제한 1초, 메모리제한 128MB, 프로그래머스 문제 (취코테 346p)"
 date: 2021-02-17 05:40:40 +0530
-categories: Algorithm Python
+tags: Algorithm Python
 ---
 
 <br>

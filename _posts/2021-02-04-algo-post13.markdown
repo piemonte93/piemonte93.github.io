@@ -3,7 +3,7 @@ layout: post
 title: "가사 검색 - 2020 카카오 신입공채 1차 (이진 탐색)"
 description: "풀이시간 1시간 30분 , 시간제한 1초, 메모리제한 128MB, 2020 카카오 신입공채 1차 (취코테 370p)"
 date: 2021-02-04 03:57:40 +0530
-categories: Algorithm Python
+tags: Algorithm Python
 ---
 
 <br>

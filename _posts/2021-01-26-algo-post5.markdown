@@ -3,7 +3,7 @@ layout: post
 title: "게임 개발 (구현, 시뮬레이션)"
 description: "풀이시간 40분 , 시간제한 1초, 메모리제한 128MB (취코테 with Python 118p 실전문제)"
 date: 2021-01-26 08:18:36 +0530
-categories: Algorithm Python
+tags: Algorithm Python
 ---
 
 삼성전자에서 자주나오는 유형의 구현, 시뮬레이션 문제이다.<br>

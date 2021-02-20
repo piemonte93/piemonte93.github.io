@@ -3,7 +3,7 @@ layout: post
 title: "블록 이동하기 - 2020 카카오 블라인드 1차"
 description: "풀이시간 50분 , 시간제한 1초, 메모리제한 128MB, 2020 카카오 블라인드 1차 (취코테 355p)"
 date: 2021-02-17 23:42:40 +0530
-categories: Algorithm Python
+tags: Algorithm Python
 ---
 
 <br>

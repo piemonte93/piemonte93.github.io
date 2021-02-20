@@ -3,7 +3,7 @@ layout: post
 title: "Django와 Flask 선택의 방법"
 description: Django vs Flask
 date: 2021-01-26 01:18:36 +0900
-categories: Back-End Python Django Flask
+tags: Back-End Python Django Flask
 ---
 
 Python으로 Back-End를 구성한다면 Django와 Flask 둘중에 어느걸 써야할지 궁금했는데 이에 관련해서 2016 Pycon에서 설명한 영상이 있었다.<br>

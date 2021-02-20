@@ -3,7 +3,7 @@ layout: post
 title: "부품 찾기 (이진 탐색)"
 description: "풀이시간 30분 , 시간제한 1초, 메모리제한 128MB (취코테 with Python 197p)"
 date: 2021-01-29 08:18:36 +0530
-categories: Algorithm Python
+tags: Algorithm Python
 ---
 
 이 문제는 여러가지 방법으로 풀 수 있는데 기본적으론 이진탐색을 이용하여 풀 수 있다. <br>

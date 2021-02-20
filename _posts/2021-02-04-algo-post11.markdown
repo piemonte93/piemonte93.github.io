@@ -3,7 +3,7 @@ layout: post
 title: "고정점 찾기 (이진 탐색)"
 description: "풀이시간 20분 , 시간제한 1초, 메모리제한 128MB, 출처 Amazon 인터뷰 (취코테 368p)"
 date: 2021-02-04 03:57:38 +0530
-categories: Algorithm Python
+tags: Algorithm Python
 ---
 
 아주 기본적인 이진탐색 문제이다. 배열을 array라고 할 경우 배열의 인덱스의 값과 인덱스가 같은 값을 찾기만 하면 된다. 이 경우가 고정점이기 때문이다.<br>

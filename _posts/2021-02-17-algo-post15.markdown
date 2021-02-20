@@ -3,7 +3,7 @@ layout: post
 title: "BOJ 14502 - 연구소(DFS)"
 description: "풀이시간 40분 , 시간제한 2초, 메모리제한 512MB, 백준 14502번 (취코테 341p)"
 date: 2021-02-17 05:29:40 +0530
-categories: Algorithm Python
+tags: Algorithm Python
 ---
 
 <br>

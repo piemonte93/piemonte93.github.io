@@ -3,7 +3,7 @@ layout: post
 title: "Web App과 Web Site의 차이"
 description: "Web Apps vs Web Sites"
 date: 2021-02-19 22:40:40 +0530
-categories: Front-End
+tags: Front-End
 ---
 
 웹 어플리케이션과 웹 사이트는 꽤나 다르다.<br><br>

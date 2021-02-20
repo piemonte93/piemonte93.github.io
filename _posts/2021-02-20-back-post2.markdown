@@ -3,7 +3,7 @@ layout: post
 title: "Node.js란?"
 description: "What is Node.js"
 date: 2021-02-19 22:40:40 +0530
-categories: Back-End Javascript Node.js
+tags: Back-End Javascript Node.js
 ---
 
 Javascript는 웹브라우저에 내장 되어 있다. 그래서 웹 브라우저에서만 이용이 가능했다.<br><br>

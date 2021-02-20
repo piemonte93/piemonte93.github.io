@@ -8,8 +8,6 @@ layout: page
 {% capture this_word %}{{ page.title }}{% endcapture %}
 {%- if page.category == "blog" -%}
 <div class="page-tag-header-blog">
-{%- elsif page.category == "dependency" -%}
-<div class="page-tag-header-dependency">
 {%- else -%}
 <div class="page-tag-header-default">
 {%- endif -%}
