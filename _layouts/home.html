@@ -11,6 +11,34 @@ layout: page
       <a class="post-link" href="{{ post.url | relative_url }}">
         <h2 class="post-title">{{ post.title | escape }}</h2>
       </a>
+    </div>
+    <div class="post-tag">
+      <ul class="post-tag-container">
+        {%- for tag in post.tags -%} {%- if tag == "Front-End" or tag ==
+        "Javascript" -%}
+        <li style="background-color: #ffd60a">
+          <a href="{{ site.baseurl }}/tags/{{ tag }}">{{ tag }}</a>
+        </li>
+        {%- elsif tag == "React.js" or tag == "SPA"-%}
+        <li style="background-color: #72c1e3">
+          <a href="{{ site.baseurl }}/tags/{{ tag }}">{{ tag }}</a>
+        </li>
+        {%- elsif tag == "Python" or tag == "Flask" -%}
+        <li style="background-color: #5856d6">
+          <a href="{{ site.baseurl }}/tags/{{ tag }}">{{ tag }}</a>
+        </li>
+        {%- elsif tag == "Node.js" -%}
+        <li style="background-color: #78b85c">
+          <a href="{{ site.baseurl }}/tags/{{ tag }}">{{ tag }}</a>
+        </li>
+        {%- elsif tag == "Algorithm" or tag == "CS" -%}
+        <li style="background-color: #fd2020">
+          <a href="{{ site.baseurl }}/tags/{{ tag }}">{{ tag }}</a>
+        </li>
+        {%- else -%}
+        <li><a href="{{ site.baseurl }}/tags/{{ tag }}">{{ tag }}</a></li>
+        {%- endif -%} {%- endfor -%}
+      </ul>
       <div class="post-date">
         <i class="icon-calendar"></i>{{ post.date | date: date_format }}
       </div>
