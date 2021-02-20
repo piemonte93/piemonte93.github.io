@@ -7,7 +7,7 @@
   </div>
   <div class="post-tag">
     <ul class="post-tag-container">
-      {%- for tag in post.tags -%} {%- if tag == "Front-End" or tag ==
+      {%- for tag in page.tags -%} {%- if tag == "Front-End" or tag ==
       "Javascript" -%}
       <li style="background-color: #ffd60a">
         <a href="{{ site.baseurl }}/tags/{{ tag }}">{{ tag }}</a>
