@@ -1,44 +1,40 @@
-title: Piemonte's 블로그
-author: piemonte93
-email: b07882002@gmail.com
+title: Joo Hee Kim
+author: Joo Hee Kim
+email: imjhk03@gmail.com
 description: > # this means to ignore newlines until "show_exerpts:"
-  개발 일지와 여러가지 이야기..
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
 show_excerpts: true # set to true to show excerpts on the homepage
-baseurl: ""
-url: "https://piemonte93.github.io"
+# baseurl: /texture
 
 # Minima date format
 # refer to http://shopify.github.io/liquid/filters/date/ if you want to customize this
 sass:
   sass_dir: _sass
 
-permalink: /posts/:title/
+# permalink: /posts/:title/
 texture:
-  title: Piemonte
-  tagline: Developer
-  date_format: "%y, %b %-d"
-  style: black
+  title: Joo Hee Kim
+  tagline: iOS Developer
+  description: Create something, craft well
+  date_format: "%Y-%m-%d"
+  style: swiftColor
   showNav: true
   showPicker: false
-  # navigation:
-  #   - title: Algorithm
-  #     url: "/algorithm/"
-  #   - title: CS
-  #     url: "/cs/"
-  #   - title: Front-End
-  #     url: "/front-end/"
-  #   - title: Back-End
-  #     url: "/back-end/"
-  #   - title: 잡담
-  #     url: "/talk/"
 
   # generate social links in footer
   social_links:
-    twitter: thelehhman
-    github: piemonte93
-    linkedIn: in/donghyun-cha-65245613a/
-    instagram: dh_cha
+    twitter: _jooheekim_
+    github:  imjhk03
+    linkedIn: in/imjhk03
     rss: rss
+
+  # Google Analytics
+  analytics_id: UA-155758599-1
+
+  # Google Search Console
+  google-site-verification: google8152682f1b05589f
 
 # If you want to link only specific pages in your header, uncomment
 # this and add the path to the pages in order as they should show up
@@ -46,9 +42,9 @@ texture:
 # - about.md
 
 # Build settings
-remote_theme: thelehhman/texture
-theme: texture
+# theme: texture
 
 plugins:
   - jekyll-seo-tag
-#  - jekyll-feed
+  # - splashtag
+  #- jekyll-feed

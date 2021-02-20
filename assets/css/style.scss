@@ -76,6 +76,38 @@
     }
 }
 
+.texture-classicBlue {
+    background-color: #0f4c81;
+
+    h2 {
+        color: #ddd;
+    }
+
+    .social i:hover {
+        color: #eee;
+    }
+
+    .post-date {
+        color: #ccc;
+    }
+}
+
+.texture-swiftColor {
+    background-image: linear-gradient(#F88A36, #FD2020);
+
+    h2 {
+        color: rgba(235, 235, 245, 0.6);
+    }
+
+    .social i:hover {
+        color: #eee;
+    }
+
+    .post-date {
+        color: #ccc;
+    }
+}
+
 .texture-red {
     background-image: url('{{ site.baseurl }}/assets/textures/red.jpg');
 }

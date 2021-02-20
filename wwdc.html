@@ -1,0 +1,20 @@
+---
+layout: page
+---
+
+{% capture site_categories %}{% for category in site.categories %}{{ category | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
+{% assign tag_words = site_categories | split:',' | sort %}
+
+<h1>WWDC</h1>
+<h3>WWDC 관련된 글들만 모은 페이지입니다.</h3>
+
+<div id="tags">
+  <ul class="tags-tag-container">
+    {% for item in (0..site.categories.size) %}{% unless forloop.last %}
+    {% capture this_word %}{{ tag_words[item] | strip_newlines }}{% endcapture %}
+    {%- if this_word == 'WWDC' -%}
+    <li><a href="{{ site.baseurl }}/wwdc/{{ this_word }}">{{ this_word }}</a></li>
+    {%- endif -%}
+    {% endunless %}{% endfor %}
+  </ul>
+</div>

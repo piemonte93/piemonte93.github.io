@@ -1,23 +1,45 @@
-@import 'ext/solarized-light';
+// @import 'ext/solarized-light';
+// @import 'ext/one_dark';
+@import 'ext/monokai';
+
+$green: #a6e22e;
 
 div.highlighter-rouge {
-	width: 100vw;
+	// width: 100vw;
 	position: relative;
-	right: 150px;
-	margin: 40px 0;
+	//right: 150px;
+	overflow: scroll;
+	margin: 20px 0;
+	background-color: #282c34;
 }
 
 .highlight {
-	background-color: #f4f4f4;
+	background-color: #282c34;
 }
 
 div.highlight {
-	padding: 30px 150px;
+	padding: 15px 20px;
 }
 
-pre.highlight, code {
+pre.highlight {
 	font-family: 'Consolas', Menlo, monospace;
 	line-height: 1.4em;
 	tab-size: 4;
-	background-color: #f4f4f4;
+	background-color: #282c34;
+	color: $green;
+	padding: 3px 5px;
+	font-size: medium;
+	word-break: break-word;
+	display: inline-flex;
+}
+
+code {
+	font-family: 'Consolas', Menlo, monospace;
+	line-height: 1.4em;
+	tab-size: 4;
+	background-color: #282c34;
+	color: $green;
+	padding: 3px 5px;
+	font-size: medium;
+	word-break: break-word;
 }
