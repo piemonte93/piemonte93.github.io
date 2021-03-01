@@ -103,7 +103,8 @@ tags: Algorithm Python
     </li>
     <li>dp 배열을 형성하기 위해, 1부터 N까지 bottom-up 으로 반복한다. 이전 dp 값들이 이후의 값 계산에 쓰일 수 있다.</li>
 </ul>
-<span style="color:blue; font-size:20px"></span><br><br><br>
+<br>
+<span style="color:blue; font-size:20px">소스 코드</span><br><br>
 
 ```python
 n = int(input())
