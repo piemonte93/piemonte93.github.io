@@ -8,6 +8,7 @@ tags: Algorithm Python
 
 [연속합 (BOJ-1912)][boj-1912]<br>
 다이나믹 프로그래밍으로 첫번째 요소에서부터 최대 연속합을 기록하는 방법을 이용하면 된다. 점화식을 구하면 다음과 같다<br>
+
 <span style="color:blue; font-size:25px">dp[i] = max(dp[i - 1] + li[i], li[i])</span><br>
 
 우선 첫번째 요소일때의 최대 연속합은 자기 자신이므로 dp[1] = li[0]으로 초기화 해주고 이후부터 점화식을 적용하면 된다.<br>
