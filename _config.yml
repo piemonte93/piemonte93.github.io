@@ -52,37 +52,33 @@ author:
 menu:
   - title:             ABOUT
     url:               /about/
-  - title:             STUDY LOG
-    url:               /studylog/
-    submenu: 
-      - title:         ALGORITHM
-        url:           /algorithm/
-      - title:         FRONTEND
-        url:           /frontend/
-        submenu:
-          - title:      HTML CSS
-            url:        /htmlcss/
-          - title:      Javascript
-            url:        /js/
-          - title:      React
-            url:        /react/
-      - title:         BACKEND
-        url:           /backend/
-        submenu:
-          - title:      Spring
-            url:        /spring/
-          - title:      Node.js
-            url:        /nodejs/
-      - title:         FULL STACK
-        url:           /fullstack/
-        submenu:
-          - title:     Typescript
-            url:       /typescript/
-          - title:     Next.js
-            url:       /nextjs/
-
-  - title:              BAEKJOON
-    url:               /baekjoon/
+  - title:         ALGORITHM
+    url:           /algorithm/
+  - title:         FRONTEND
+    url:           /frontend/
+    submenu:
+      - title:      HTML CSS
+        url:        /htmlcss/
+      - title:      Javascript
+        url:        /js/
+      - title:      React
+        url:        /react/
+  - title:         BACKEND
+    url:           /backend/
+    submenu:
+      - title:      Spring
+        url:        /spring/
+      - title:      Node.js
+        url:        /nodejs/
+  - title:         FULL STACK
+    url:           /fullstack/
+    submenu:
+      - title:     Typescript
+        url:       /typescript/
+      - title:     Next.js
+        url:       /nextjs/
+  - title:         일상
+    url:           /daily/
 
 
 # Add links to the footer.
