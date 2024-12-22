@@ -4,6 +4,8 @@ related_posts:
   - /frontend/javascript/
 title: "Canvas API"
 date: 2024-12-22 23:47:47 +0900
+image: 
+  path: https://blog.logrocket.com/wp-content/uploads/2021/05/javascript-svg-canvas.png
 categories:
   - frontend
   - javascript

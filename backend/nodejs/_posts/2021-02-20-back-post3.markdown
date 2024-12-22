@@ -3,6 +3,8 @@ layout: post
 related_posts:
   - /backend/nodejs/
 title: "Node.js는 언제 사용해야 하는걸까?"
+image:
+  path: https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1200px-Node.js_logo.svg.png
 date: 2021-02-20 22:40:40 +0530
 categories:
   - backend
