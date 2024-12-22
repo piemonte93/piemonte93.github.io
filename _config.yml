@@ -48,13 +48,29 @@ author:
   # twitter:             <username>
 
 # Add links to the sidebar.
+# Add links to the sidebar.
 menu:
-  - title:             Example
-    url:               /example/
-  - title:             Documentation
-    url:               /docs/
-  - title:             About
+  - title:             ABOUT
     url:               /about/
+  - title:             STUDY LOG
+    url:               /studylog/
+    submenu: 
+      - title:         OS
+        url:           /os/
+      - title:         NETWORK
+        url:           /network/
+      - title:         HYDEJACK
+        url:           /hydejack/
+  - title:             GAME DEVELOG
+    url:               /gamedevelog/
+    submenu:
+      - title:         UNREAL ENGINE
+        url:           /unrealengine/
+  - title:             GAME ANALYSIS
+    url:               /gameanalysis/
+  - title:              BAEKJOON
+    url:               /baekjoon/
+
 
 # Add links to the footer.
 # Typically you'll want to link to your cookie- or privacy policy (if appliable), etc..
