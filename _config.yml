@@ -389,9 +389,9 @@ plugins:
 # Used on index and about sites
 # social:
 #   name:                <firstname> <lastname>
-   links:
+#   links:
 #     - https://twitter.com/<username>
-     - https://github.com/piemonte93
+#     - https://github.com/piemonte93
 
 
 # Plugin Configs
