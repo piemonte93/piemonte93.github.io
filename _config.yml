@@ -55,19 +55,32 @@ menu:
   - title:             STUDY LOG
     url:               /studylog/
     submenu: 
-      - title:         OS
-        url:           /os/
-      - title:         NETWORK
-        url:           /network/
-      - title:         HYDEJACK
-        url:           /hydejack/
-  - title:             GAME DEVELOG
-    url:               /gamedevelog/
-    submenu:
-      - title:         UNREAL ENGINE
-        url:           /unrealengine/
-  - title:             GAME ANALYSIS
-    url:               /gameanalysis/
+      - title:         ALGORITHM
+        url:           /algorithm/
+      - title:         FRONTEND
+        url:           /frontend/
+        submenu:
+          - title:      HTML CSS
+            url:        /htmlcss/
+          - title:      Javascript
+            url:        /js/
+          - title:      React
+            url:        /react/
+      - title:         BACKEND
+        url:           /backend/
+        submenu:
+          - title:      Spring
+            url:        /spring/
+          - title:      Node.js
+            url:        /nodejs/
+      - title:         FULL STACK
+        url:           /fullstack/
+        submenu:
+          - title:     Typescript
+            url:       /typescript/
+          - title:     Next.js
+            url:       /nextjs/
+
   - title:              BAEKJOON
     url:               /baekjoon/
 
