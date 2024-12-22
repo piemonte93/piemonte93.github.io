@@ -3,14 +3,14 @@
 layout: list
 
 # The title of the tag's page.
-title: nodejs
+title: Node.js
 
 # The name of the tag, used in a post's front matter (e.g. tags: [<slug>]).
 slug: [<backend>], [<node.js>], [<js>]
 
 # (Optional) Write a short (~150 characters) description of this featured tag.
 description: >
-    node.js 관련 공부 및 이것저것...
+    Node.js 관련 공부 및 이것저것...
 
 # (Optional) You can disable grouping posts by date.
 # no_groups: true
