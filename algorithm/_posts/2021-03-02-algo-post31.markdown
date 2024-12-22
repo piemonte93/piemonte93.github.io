@@ -1,0 +1,35 @@
+---
+layout: post
+related_posts:
+  - /algorithm/
+title: "가장 큰 증가 부분 수열 (BOJ-11055)"
+date: 2021-03-02 02:46:40 +0530
+categories:
+  - algorithm
+description: >
+  '시간제한 1초, 메모리제한 256MB, BOJ-11055'
+---
+
+[가장 큰 증가 부분 수열 (BOJ-11055)][boj-11055]<br>
+이전에 풀었던 가장 긴 증가 부분 수열과 비슷한데 dp에 들어가는 값이 길이가 아닌 수열들의 합이다.<br>
+
+따라서 dp를 0으로 초기화 하지 않고 dp = li로 입력받은 배열과 동일한 값으로 초기화를 하였는데 테스트 케이스는 똑같이 나오는데 자꾸 백준에서 돌릴때마다 틀렸다고 떠서, 왠지 찾아보니 dp = [x for x in li]로 초기화 해주면 해결된다고 하는데, 저렇게 생성된 dp와 dp = li로 생성된 dp가 차이가 뭔질 아직 모르겠다;;
+
+<span style="color:red; font-size:20px">DP를 활용한 풀이</span><br>
+
+```python
+n = int(input())
+
+li = list(map(int, input().split()))
+
+dp = [x for x in li]
+
+for i in range(n):
+    for j in range(i):
+        if li[i] > li[j]:
+            dp[i] = max(dp[i], dp[j] + li[i])
+
+print(max(dp))
+```
+
+[boj-11055]: https://www.acmicpc.net/problem/11055

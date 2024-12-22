@@ -1,0 +1,52 @@
+---
+layout: post
+related_posts:
+  - /algorithm/
+title: "음료수 얼려먹기 (DFS)"
+date: 2021-01-26 08:18:36 +0530
+categories: 
+  - algorithm
+description: >
+  '풀이시간 30분 , 시간제한 1초, 메모리제한 128MB (취코테 with 파이썬 149p 실전문제)'
+---
+
+얼릴수 있는 공간이 상하좌우로 연결될 수 있으므로 그래프 형태로 모델링이 가능하다. 여기서는 그래프에서 0인 노드를 묶어서 갯수를 출력하면 되고 이는 DFS로 구현 가능하다.<br><br>
+특정 지점에서 상하좌우를 살펴보고 값이 0이고 방문하지 않은곳은 방문처리.<br>
+방문한 지점에서 다시 상하좌우 확인후 방문을 다시 진행하면 모든 지점을 방문 가능하다.<br><br>
+
+```python
+from sys import stdin
+
+def dfs(x, y):
+  ## 만약 범위를 벗어난다면 False를 반환하고 종료
+  if x <= -1 or y <= -1 or x >= n or y >= m:
+    return False
+
+  if graph[x][y] == 0: ## 만약 현재 위치가 0이라면
+    graph[x][y] = 1 ## 1로 바꾸어 방문처리하고
+    ## 상하좌우를 방문처리한다(여기서는 방문처리를 위해 실행하는것일뿐 반환값은 이용하지 않는다. 결국 result를 올리지는 않음)
+    dfs(x-1, y) ## 상
+    dfs(x, y-1) ## 좌
+    dfs(x+1, y) ## 하
+    dfs(x, y+1) ## 우
+    return True
+  return False
+
+n , m = map(int, input().split()) ## n x m 을 입력
+
+graph = []
+# n x m 리스트 생성
+for i in range(n):
+  graph.append(list(map(int, stdin.readline().rstrip())))
+
+result = 0 ## 아이스크림 갯수 0 으로 초기화
+
+## 모든 노드(위치)에 대하여 음료수 채우기
+for i in range(n):
+  for j in range(m):
+    ## 현재 위치에서 dfs 수행
+    if dfs(i, j) == True:
+      result += 1
+
+print(result)
+```

@@ -1,0 +1,107 @@
+---
+layout: post
+related_posts:
+  - /algorithm/
+title: "정렬된 배열에서 특정 수의 개수 구하기 (이진 탐색)"
+date: 2021-02-04 03:57:37 +0530
+categories:
+  - algorithm
+description: >
+  '풀이시간 30분 , 시간제한 1초, 메모리제한 128MB, 출처 Zoho 인터뷰 (취코테 367p)'
+---
+
+이 문제는 사실 파이썬의 Bisect 라이브러리를 이용하면 매우 쉽게 해결할 수 있다. bisect_left(),bisect_right()를 이용하면 정렬된 리스트에서 같은 수의 갯수를 구할 수 있기 때문이다.<br>
+
+하지만 라이브러리를 활용하지않고 푸는 방법도 유념하면 좋다.
+<br><br>
+<span style="font-size:20; color:blue">bisect 라이브러리 활용한 방법🤘</span>
+
+```python
+# bisect 라이브러리 활용한 방법
+from bisect import bisect_left, bisect_right
+
+def count_by_range(arr, left_value, right_value):
+  left_index = bisect_left(arr, left_value)
+  right_index = bisect_right(arr, right_value)
+
+  if right_index - left_index != 0:
+    return right_index - left_index
+
+  else:
+    return -1
+
+N, x = map(int, input().split())
+array = list(map(int, input().split()))
+
+print(count_by_range(array, x, x))
+```
+
+<br><br>
+<span style="font-size:20; color:red">기본적인 이진탐색을 활용한 방법😭</span>
+
+```python
+# 정렬된 수열에서 값이 x인 원소의 개수를 새는 메서드
+def count_by_value(array, x):
+  #데이터의 개수
+  n = len(array)
+
+  # x가 처음 등장한 인덱스 계산
+  a = first(array, x, 0, n - 1)
+
+  # 수열에 x가 존재하지 않는 경우
+  if a == None:
+    return 0 # 값이 x인 원소의 개수는 0개이므로 0 반환
+
+  # x가 마지막으로 등장한 인덱스 계산
+  b = last(array, x, 0, n - 1)
+
+  # 개수를 반환
+  return b - a + 1
+
+
+# 처음 위치를 찾는 이진 탐색 매서드
+def first(array, target, start, end):
+  if start > end:
+    return None
+
+  mid = (start + end) // 2
+  # 해당 값을 가지는 원소 중에서 가장 왼쪽에 있는 경우에만 인덱스 반환
+  if (mid == 0 or target > array[mid - 1]) and array[mid] == target:
+    return mid
+  # 중간점의 값 보다 찾고자 하는 값이 작거나 같은 경우 왼쪽 확인
+  elif array[mid] >= target: # 왼쪽에 같은값이 있을 경우를 포함해야하므로 = 들어감
+    return first(array, target, start, mid - 1)
+  # 중간점의 값 보다 찾고자 하는 값이 큰 경우 오른쪽 확인
+  else:
+    return first(array, target, mid + 1, end)
+
+
+# 마지막 위치를 찾는 이진 탐색 매서드
+def last(array, target, start, end):
+  if start > end:
+    return None
+  mid = (start + end) // 2
+  # 해당 값을 가지는 원소 중에서 가장 오른쪽에 있는 경우에만 인덱스 반환
+  if (mid == len(array) - 1 or target < array[mid + 1]) and array[mid] == target:
+    return mid
+  # 중간점의 값 보다 찾고자 하는 값이 작은 경우 왼쪽 확인
+  elif array[mid] > target:
+    return last(array, target, start, mid - 1)
+  # 중간점의 값 보다 찾고자 하는 값이 크거나 같은 경우 오른쪽 확인
+  else:
+    return last(array, target, mid + 1, end)
+
+
+n, x = map(int, input().split()) # 데이터의 개수 N, 찾고자 하는 값 x를 입력받기
+array = list(map(int, input().split())) # 전체 데이터 입력받기
+
+# 값이 x인 데이터의 개수 계산
+count = count_by_value(array, x)
+
+# 값이 x인 원소가 존재하지 않는다면
+if count == 0:
+  print(-1)
+# 값이 x인 원소가 존재한다면
+else:
+  print(count)
+```

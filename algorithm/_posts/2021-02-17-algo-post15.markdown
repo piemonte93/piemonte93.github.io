@@ -1,0 +1,88 @@
+---
+layout: post
+related_posts:
+  - /algorithm/
+title: "BOJ 14502 - 연구소(DFS)"
+date: 2021-02-17 05:29:40 +0530
+categories:
+  - algorithm
+description: >
+  '풀이시간 40분 , 시간제한 2초, 메모리제한 512MB, 백준 14502번 (취코테 341p)'
+---
+
+<br>
+[Baekjoon 14502: 연구소][boj14502]
+<br>
+이 문제에서는 바이러스와 벽을 DFS를 이용하여 구현하면 된다. 벽을 DFS를 통해 세운다. 그리고 벽을 3개를 세우면 바이러스를 DFS를 통해 퍼트리면 된다. <br>
+
+바이러스는 상하좌우로 퍼지므로 상하좌우의 좌표 데이터셋인 dx와 dy를 이용한다. <br>
+벽을 DFS를 통해 연구소의 각 위치에 방문하면서 방문한적이 없는 곳이라면 벽을 세우고 세울때마다 세운 횟수인 count를 +1 해준다. 벽을 3번 세운다면(count == 3), 벽을 세운 새로운 연구소를 temp로 복사한 후 temp를 이용하여 바이러스를 퍼트린다.<br>
+퍼트린 후에 안전지대의 갯수를 구하고 현재 안전지대 최댓값인 result값과 안전지대를 구한 값중 최댓값을 저장하고 앞의 벽을 세우는 과정을 반복한다.<br>
+다시 벽을 세우기 위해서는 벽의 갯수를 -1을 하여 빼주고 세웠던 위치를 다시 안전지대인 0으로 복구시켜놔야 다시 벽을 세울수가 있다. <br><br>
+
+```python
+from sys import stdin
+
+n, m = map(int, input().split())
+data = []
+temp = [[0] * m for _ in range(n)]
+
+for _ in range(n):
+  data.append(list(map(int, stdin.readline().rstrip().split())))
+
+# 상하좌우
+dx = [-1, 1, 0, 0]
+dy = [0, 0, -1, 1]
+
+result = 0 # 안전지대 갯수
+
+def virus(x, y):
+  for i in range(4): # 상하좌우로 퍼트림
+    nx = x + dx[i]
+    ny = y + dy[i]
+
+    if nx >= 0 and ny >= 0 and nx < n and ny < m:
+      if temp[nx][ny] == 0:
+        temp[nx][ny] = 2
+        virus(nx, ny)
+
+
+def get_area(): # 안전지대 갯수 반환
+  area = 0
+  for i in range(n):
+    for j in range(m):
+      if temp[i][j] == 0:
+        area += 1
+
+  return area
+
+
+def dfs(count):
+  global result
+  if count == 3: # 벽이 3개 설치 다되면
+    for i in range(n):
+      for j in range(m):
+        temp[i][j] = data[i][j]
+
+    for i in range(n):
+      for j in range(m):
+        if temp[i][j] == 2:
+          virus(i, j) # 바이러스를 퍼트림
+
+    result = max(result, get_area())
+    return
+
+  for i in range(n):
+    for j in range(m):
+      if data[i][j] == 0:
+        data[i][j] = 1 # 벽 설치
+        count += 1 # 설치횟수 증가
+        dfs(count) # 재귀로 벽 설치
+        data[i][j] = 0 # 원상 복구 시켜놔야 다른 위치에도 다시 설치할 수 있다.
+        count -= 1
+
+dfs(0)
+print(result)
+```
+
+[boj14502]: https://www.acmicpc.net/problem/14502

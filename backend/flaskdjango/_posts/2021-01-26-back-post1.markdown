@@ -1,0 +1,18 @@
+---
+layout: post
+related_posts:
+  - /backend/flaskdjango/
+title: "Django와 Flask 선택의 방법"
+date: 2021-01-26 08:18:36 +0530
+categories: 
+  - backend
+  - flaskdjango
+description: >
+  'Django vs Flask'
+---
+
+Python으로 Back-End를 구성한다면 Django와 Flask 둘중에 어느걸 써야할지 궁금했는데 이에 관련해서 2016 Pycon에서 설명한 영상이 있었다.<br>
+Flask는 기본적으로 micro-framework이다. 수많은 설정을 셋팅해줄 필요가 없다.
+<br><br>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/cX8n7pRA670" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

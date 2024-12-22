@@ -1,0 +1,43 @@
+---
+layout: post
+related_posts:
+  - /algorithm/
+title: "2 x n 타일링 2 (BOJ-11727)"
+date: 2021-02-24 22:40:40 +0530
+categories:
+  - algorithm
+description: >
+  '풀이시간 20분 , 시간제한 1초, 메모리제한 128MB, BOJ-11727'
+---
+
+<br>
+[2 x n 타일링 2 - BOJ 11727][boj-11727]
+<br>
+
+전형적인 다이나믹 프로그래밍 문제이다. 핵심은 뒤에서부터 타일을 1개씩 추가하는 방법으로 생각해야 한다. 이 문제를 그림으로 나타내면 다음과 같다.
+
+![DP Solving](/assets/image/BOJ11727.PNG)<br>
+
+이 문제에서 n-2 미만의 길이에 대해서는 고려할 필요가 없다. 이용 가능한 타일 종류의 최대 크기가 2 X 2 이기 때문이다.<br>
+결국 바닥을 채우는 형태는 위의 경우밖에 없다. 따라서 점화식은 이렇게 나온다.
+
+a<sub>i</sub> = a<sub>i-1</sub> + a<sub>i-2</sub> X 2
+
+왼쪽부터 n-2까지 길이가 덮개로 이미 채워져 있는 경우 덮개를 채우는 방법은 2가지 경우가 있다. 위에서 설명 한 것처럼 이 두 방법은 서로 다른 것이므로,<br>
+결과적으로 a<sub>i</sub>는 a<sub>i-1</sub> + a<sub>i-2</sub> + a<sub>i-2</sub>가 된다.<br>
+결국 간략화하면 위에 도출했던 점화식이 된다.<br>
+10007을 나눈 나머지를 출력하는 이유는 단지 결과값이 매우 커질수도 있기 때문에 설정된 것이다.
+
+```python
+n = int(input())
+
+dp = [0] * 1001
+dp[1] = 1
+dp[2] = 3
+for i in range(3, n + 1):
+    dp[i] = (dp[i-1] + dp[i-2] * 2) % 10007
+
+print(dp[n])
+```
+
+[boj-11727]: https://www.acmicpc.net/problem/11727

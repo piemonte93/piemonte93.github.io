@@ -1,0 +1,102 @@
+---
+layout: post
+related_posts:
+  - /algorithm/
+title:  "코딩 테스트 할 때 Python에서 자주\n\쓰는 방법들"
+date: 2021-01-24 08:18:36 +0530
+categories: 
+  - algorithm
+description: >
+  '코딩테스트 문제를 풀다보면 분명 아는것인데 손에서 바로 안나올 때가 있는 기술들이 있다. 코딩테스트를 보기 전에 한번 읽고 들어가기 위해 이 문서를 정리한다.'
+---
+
+n개 들이 array생성하기
+
+```python
+n = 100
+
+memo = [0] * n
+```
+
+다이나믹 프로그래밍이나 개수 제한이 문제에 있는 경우 배열을 만들어 놓고 문제에 접근 할 때 좋다.
+
+---2진수, 8진수, 10진수, 16진수 문제
+
+'a'를 10진수로 변환 해주는 예제
+
+```python
+i = 'a'
+
+print(int(i, 16))
+
+-> 10
+```
+
+10진수 8을 8진수로 변환 해주는 예제
+
+```python
+print(oct(8))
+
+-> 0o10
+```
+
+10진수를 16진수로 formatting
+
+```python
+
+print('{0:X}'.format(11))
+
+-> B
+```
+
+포메팅은 [이 문서][link-1] 참고
+
+---포메팅
+
+```python
+print('{0:02d}'.format(8))
+
+->08
+### 8을 입력하면 08로 나오게 하는 포메팅입니다.
+```
+
+소수점 2재짜리까지 나오는 포메팅
+
+```python
+print('{0:.2f}'.format(9))
+
+->9.00
+```
+
+Split해서 list에 넣기
+
+```python
+i = input()
+# i = '7 4 2 9 0 8'
+mo = list(map(int, i.split(' ')))
+## 한칸씩 띄어쓰기 되어서 입력된 숫자를 자른 후 int로 변환해서 list에 넣는 코드
+```
+
+숫자-> 알파벳으로, 알파벳 ->숫자로 바꾸기
+알파벳 관련된 문제가 나오면 ascii코드를 찾아주는 chr()와 문자를 ascii코드로 바꿔주는 ord()를 이용.
+
+```python
+chr(66)
+
+-> B
+
+ord('A')
+
+-> 65
+```
+
+알파벳은 나열 해놓고 푼다
+알파벳은 26개이지만 A부터 N까지 거리나 반대로 Z부터 S까지 거리를 구하고 싶을 때 익숙하지 않다면 써놓고 접근하면 머리가 덜 아프다
+
+```python
+# 1234567890 1234567890 123456
+
+# ABCDEFGHIJ KLMNOPQRST UVWXYZ
+```
+
+[link-1]: https://www.w3schools.com/python/ref_string_format.asp

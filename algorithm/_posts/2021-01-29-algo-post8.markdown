@@ -1,0 +1,94 @@
+---
+layout: post
+related_posts:
+  - /algorithm/
+title: "부품 찾기 (이진 탐색)"
+date: 2021-01-29 08:18:36 +0530
+categories:
+  - algorithm
+description: >
+  '풀이시간 30분 , 시간제한 1초, 메모리제한 128MB (취코테 with Python 197p)'
+---
+
+이 문제는 여러가지 방법으로 풀 수 있는데 기본적으론 이진탐색을 이용하여 풀 수 있다. <br>
+
+또한 계수정렬을 이용하여 해당번호의 부품갯수가 0이면 no, 아니면 yes를 출력하는 방법, 집합 리스트를 이용하여 집합 안에 존재하는지 확인하는 방법이 있다. 셋 다 효율적인 방법이다.<br><br><br>
+
+<span style="color:blue; font-size:20px">🤞이진 탐색을 이용한 방법🤞</span>
+
+```python
+def binary_search(array, target, start, end):
+    while start <= end:
+        mid = (start + end) // 2
+
+        if array[mid] == target:
+            return mid
+
+        elif array[mid] > target:
+            end = mid - 1
+
+        else:
+            start = mid + 1
+    return None
+
+n = int(input())
+
+parts = list(map(int, input().split()))
+
+m = int(input())
+
+orders = list(map(int, input().split()))
+
+parts.sort()
+
+for order in orders:
+    if binary_search(parts, order, 0, n-1) != None:
+        print("yes", end=' ')
+
+    else:
+        print("no", end=' ')
+
+```
+
+<br>
+<span style="color:red; font-size:20px">🤞계수 정렬을 이용한 방법🤞</span>
+
+```python
+n = int(input())
+parts = list(map(int, input().split()))
+count = [0] * (max(parts) + 1)
+m = int(input())
+orders = list(map(int, input().split()))
+
+for part in parts:
+    count[part] += 1
+
+for order in orders:
+    if count[order] != 0:
+        print("yes", end=' ')
+    else:
+        print("no", end=' ')
+```
+
+<br>
+<span style="color:turquoise; font-size:20px">🤞집합 자료형 이용🤞</span>
+
+```python
+# N(가게의 부품 개수)을 입력받기
+n = int(input())
+# 가게에 있는 전체 부품 번호를 입력받아서 집합(set) 자료형에 기록
+array = set(map(int, input().split()))
+
+# M(손님이 확인 요청한 부품 개수)을 입력받기
+m = int(input())
+# 손님이 확인 요청한 전체 부품 번호를 공백으로 구분하여 입력
+x = list(map(int, input().split()))
+
+# 손님이 확인 요청한 부품 번호를 하나씩 확인
+for i in x:
+    # 해당 부품이 존재하는지 확인
+    if i in array:
+        print('yes', end=' ')
+    else:
+        print('no', end=' ')
+```

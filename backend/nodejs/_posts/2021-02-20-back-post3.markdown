@@ -1,0 +1,40 @@
+---
+layout: post
+related_posts:
+  - /backend/nodejs/
+title: "Node.js는 언제 사용해야 하는걸까?"
+date: 2021-02-20 22:40:40 +0530
+categories:
+  - backend
+  - nodejs
+description: >
+  'Back-End로 Node.js를 사용하는 경우는 언제일까?'
+---
+
+Python으로 Django를 쓰지 않고, PHP로 Laravel을 이용하지 않고 Node.js를 이용하는건 언제일까?<br><br>
+단순히 언어적 선호도로 본다면 Javascript를 이용하여 Front-end와 Back-end를 모두 만들고 싶을 때 Node.js를 이용한다.<br><br>
+
+Front-end에는 좋든 싫든 무조건 Javascript를 이용하여야 한다. 유일한 언어이기 때문이다. 그러나 그걸 Back-end에도 이용이 가능하다.<br><br>
+뭐 Javascript가 싫다면 Back-end에는 이용하지 않을 수도 있다.<br>
+
+![Node.js image](https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1200px-Node.js_logo.svg.png)<br>
+그러나 이런 단순한 선호도의 문제를 떠나서 이용하는 이유는 모든걸 커스터마이즈 할 능력이 있다면 Node.js를 이용하는 것이 좋다.<br><br>
+만약, 무언가 이것저것 기능들이 들어있는걸 원한다면 Django나 Laravel을 이용하는게 좋다. Node.js는 아무것도 들어있지 않다고 보면 된다.<br><br>
+작은 블럭들을 위로 쌓아서 큰 성을 짓는다고 생각하면 된다. 아무것도 없는것에서 시작해서, 모든걸 붙여나가는 것이다.<br><br>
+Django같이 여러 기능이 있는 것을 이용하지만 이 기능들을 정말 극소수밖에 이용하지 못한다면 Node.js를 이용하는게 좋을 것이다.<br><br>
+Node.js가 가장 좋을 때는 많은 데이터를 움직여야 하는 경우이다.<br><br>
+DB생성, DB삭제, 사용자에게 전송하고, 어딘가에 저장하고 등의 많은 움직임이 있다면 Node.js는 데이터를 다루는 성능이 좋아서 이러한 경우에 좋은 성능을 보여준다.<br><br>
+데이터를 저장하고, 보여주고, 생성하고, 삭제하고 이를 빠르게 실시간으로 보여준다고 한다면 Node.js가 좋은 선택이다. 대표적으로 채팅기능이 이러한 경우에 해당한다.<br><br>
+![netflix image](https://images.squarespace-cdn.com/content/v1/58d20c79725e25b221549193/1524134602660-2140ON9OQ4S2NYEOQEZT/ke17ZwdGBToddI8pDm48kOUQUmiq2YQQg0YqCAwMED4UqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8N_N4V1vUb5AoIIIbLZhVYxCRW4BPu10St3TBAUQYVKcGOZUBjWW3zgJAjNO1zaqZF4ouSpgLvhBH68uj-WcX5dnwuVACbZ2aIsDVUQ-Aj4V/netflixnodejs?format=1500w)<br>
+![uber image](https://images.squarespace-cdn.com/content/v1/58d20c79725e25b221549193/1524133598073-H3VQO63KC4PZBQDVH7WU/ke17ZwdGBToddI8pDm48kOAzlJVdJoXIwTXgK6MT_nUUqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8N_N4V1vUb5AoIIIbLZhVYxCRW4BPu10St3TBAUQYVKc-TzKagYgJ3HtbToP5fRZdNnl77o4-80QcuNJfF9LnDUusArXoTEYu5QublcK7jD4/ubernodejs?format=1500w)<br>
+![paypal image](https://images.squarespace-cdn.com/content/v1/58d20c79725e25b221549193/1524133487360-3NR69S56TVCQN32EBVQS/ke17ZwdGBToddI8pDm48kDuj7OEywyiHAOr6eMwFbhYUqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8N_N4V1vUb5AoIIIbLZhVYxCRW4BPu10St3TBAUQYVKc_TZQo74jqbIHdXKaed58TCatfeLIQqgTii6HnSeNEs5zv9qr-M36NWS9U9dCriR8/paypalnodejs?format=1500w)
+
+```
+실제 Node.js를 적용중인 서비스로는 Uber, Paypal, Netflix 등이 있다.
+모두 앞에 언급한 특징을 가지고 있는 서비스들이라 Node.js를 이용한다.
+```
+
+<br>
+그러나 데이터 사이언스등에서 서버의 하드웨어를 이용하는 경우, 예를들면 이미지를 압축한다던가 crop한다거나 필터를 적용하고 저장하는 그러한 경우에는 Node.js는 전혀 도움되지 않는다.<br><br>
+Javascript는 메모리, 램등의 하드웨어에 접근할 수 없기 때문이다. 이러한 예는 유튜브 동영상 처리 서브를 생각하면 된다.<br><br>
+유튜브에 영상을 올릴때마다 이를 4가지 포멧으로 바꾸고, 그 중에서 오디오 트랙을 찾아서 그 오디오 트랙이 저작권을 가지고 있는 다른 오디오 트랙과 같은지 확인하는 작업등은 Node.js로 다루기가 어렵다.<br><br><br><br>

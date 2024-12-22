@@ -70,6 +70,8 @@ menu:
         url:        /spring/
       - title:      Node.js
         url:        /nodejs/
+      - title:      Flask Django
+        url:        /flaskdjango/
   - title:         FULL STACK
     url:           /fullstack/
     submenu:

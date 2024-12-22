@@ -1,0 +1,89 @@
+---
+layout: post
+related_posts:
+  - /algorithm/
+title: "블록 이동하기 - 2020 카카오 블라인드 1차"
+date: 2021-02-17 23:42:40 +0530
+categories:
+  - algorithm
+description: >
+  '풀이시간 50분 , 시간제한 1초, 메모리제한 128MB, 2020 카카오 블라인드 1차 (취코테 355p)'
+---
+
+<br>
+[블록 이동하기][programmers_kakao]
+<br>
+처음엔 최단시간을 구하는 문제이므로 BFS를 활용해야 하는건 알았지만 회전을 언제 해야하는지, 그리고 회전을 어떤 방법으로 해야할지를 전혀 몰랐었다.<br>
+
+나중에 알았지만 이 문제의 핵심은 이동 가능한 위치를 전부 집어넣는 것이였다. 결국 그냥 회전 될수 있는 좌표를 전부 집어넣으면 해결이 가능했다.<br>
+또한 드론은 두칸을 차지하므로 드론이 차지하는 위치를 집합 자료형을 튜플로 구성하는 방법을 이용해야 한다. 집합 자료형을 이용하면 순서가 달라도 같은 것으로 취급한다.<br>
+에를 들면, {(1, 1), (1, 2)} 와 {(1, 2), (1, 1)}은 집합에서는 같은 것으로 취급한다.<br>
+이를 이용하면 회전을 해서 순서가 뒤집혀진다 하더라도 한번 방문한 곳은 두번 방문하지 않게 된다.<br>
+회전을 할 때는 시계방향으로 회전하는 경우와 반시계 방향으로 회전하는 경우 모두 넣어준다.<br>
+결국 이동 가능한 범위를 모두 기록하고 그 기록된 범위를 BFS에 활용하는것이 핵심이다.<br><br>
+
+```python
+from collections import deque
+
+
+def get_next_pos(pos, board):
+  next_pos = [] # 반환 결과(이동 가능한 위치들)
+  pos = list(pos) # 현재 위치 정보를 집합에서 리스트로 변환
+  pos_x1, pos_y1, pos_x2, pos_y2 = pos[0][0], pos[0][1], pos[1][0], pos[1][1]
+  # 상하좌우
+  dx = [-1, 1, 0, 0]
+  dy = [0, 0, -1, 1]
+
+  for i in range(4):
+    pos_x1_next, pos_y1_next, pos_x2_next, pos_y2_next = pos_x1 + dx[i], pos_y1 + dy[i], pos_x2 + dx[i], pos_y2 + dy[i]
+    # 이동하려는 장소가 모두 비어 있다면
+    if board[pos_x1_next][pos_y1_next] == 0 and board[pos_x2_next][pos_y2_next] == 0:
+      next_pos.append({(pos_x1_next, pos_y1_next), (pos_x2_next, pos_y2_next)})
+
+  # 드론이 가로로 있다면
+  if pos_x1 == pos_x2:
+    for i in [-1, 1]: # 윗쪽이나 아랫쪽으로 회전
+      if board[pos_x1 + i][pos_y1] == 0 and board[pos_x2 + i][pos_y2] == 0: # 윗쪽과 아랫쪽이 비었는지
+        next_pos.append({(pos_x1, pos_y1), (pos_x1 + i, pos_y1)}) # 반시계 방향 회전
+        next_pos.append({(pos_x2, pos_y2), (pos_x2 + i, pos_y2)}) # 시계 방향 회전
+
+  # 드론이 세로인 상황이면
+  elif pos_y1 == pos_y2:
+    for i in [-1, 1]: # 윗쪽이나 아랫쪽으로 회전
+      if board[pos_x1][pos_y1 + i] == 0 and board[pos_x2][pos_y2 + i] == 0: # 좌 우가 비었는지
+        next_pos.append({(pos_x1, pos_y1), (pos_x1, pos_y1 + i)}) # 반시계 방향 회전
+        next_pos.append({(pos_x2, pos_y2), (pos_x2, pos_y2 + i)}) # 시계 방향 회전
+
+  return next_pos # 현재 위치에서 이동가능한 위치를 반환
+
+
+
+def solution(board):
+    # 맵 외곽에 벽을 두는 형태로 맵 변형
+    n = len(board)
+    new_board = [[1] * (n + 2) for _ in range(n + 2)]
+    for i in range(n):
+      for j in range(n):
+        new_board[i + 1][j + 1] = board[i][j]
+    # BFS 수행
+    pos = {(1, 1),(1, 2)} # 시작 위치 설정
+    visited = []
+    q = deque()
+    q.append((pos,0)) # 큐에 집어넣은 후에
+    visited.append(pos) # 방문 처리
+
+    while q: # 큐가 빌때까지
+      pos, cost = q.popleft()
+      # (n, n) 위치, 즉, 목표 위치에 도달하였다면, 최단거리이므로 반환
+      if (n, n) in pos:
+        return cost
+      # 현재 위치에서 이동가능한 위치 확인
+      for next_pos in get_next_pos(pos, new_board):
+        # 이동 가능한 위치 중 아직 방문하지 않은 곳이 있다면 해당 위치와 시간을 큐에 삽입하고 방문 처리
+        if next_pos not in visited:
+          q.append((next_pos, cost + 1))
+          visited.append(next_pos)
+    return 0
+```
+
+[programmers_kakao]: https://programmers.co.kr/learn/courses/30/lessons/60063

@@ -1,0 +1,48 @@
+---
+layout: post
+related_posts:
+  - /algorithm/
+title: "떡볶이 떡 만들기 (이진 탐색, 파라메트릭 서치)"
+date: 2021-02-04 03:57:36 +0530
+categories:
+  - algorithm
+description: >
+  '풀이시간 40분 , 시간제한 2초, 메모리제한 128MB (취코테 with Python 201p)'
+---
+
+이 문제는 떡을 자르는 절단기 높이 H를 1씩 증가시켜서 탐색을 하면 각 개별의 떡의 길이가 10억 이하이므로 시간초과를 할수밖에 없다. 따라서 이진탐색으로 범위를 줄여가며 높이 H의 탐색을 해야한다.<br>
+
+이 문제는 전형적인 이진 탐색 문제이자 파라메트릭 서치(Parametric Search) 유형의 문제이다. 파라메트릭 서치는 최적화 문제를 결정문제(예 혹은 아니오)로 바꾸어 해결하는 기법이다. 코딩테스트에서는 보통 파라메트릭 서치 유형은 이진탐색을 이용해 해결한다.<br>
+여기서는 얻을 수 있는 떡볶이의 양(total)에 따라서 자를 위치를 결정해야 하기 때문에 재귀로 구현할 경우 매우 귀찮은 작업이 되므로 반복문으로 이진 탐색을 구현했다.<br><br>
+
+```python
+
+# 떡의 개수(N)와 요청한 떡의 길이(M)을 입력받기
+n, m = list(map(int, input().split(' ')))
+# 각 떡의 개별 높이 정보를 입력받기
+array = list(map(int, input().split()))
+
+# 이진 탐색을 위한 시작점과 끝점 설정
+start = 0
+end = max(array) # 떡 중에 가장 긴 것
+
+# 이진 탐색 수행(반복적)
+result = 0
+while(start <= end):
+  total = 0
+  mid = (start + end) // 2
+  for x in array:
+    # 잘랐을 때의 떡의 양 계산
+    if x > mid: # 절단기의 높이보다 떡의 길이가 길다면
+      total += x - mid
+  # 떡의 양이 부족한 경우 더 많이 자르기(왼쪽 부분 탐색)
+  if total < m:
+    end = mid - 1
+  # 떡의 양이 충분한 경우 덜 자르기(오른쪽 부분 탐색)
+  else:
+    result = mid # 최대한 덜 잘랐을 때(요구한 길이가 나오는 경우 중 절단기 높이가 제일 높을때)가 정답이므로, 여기에서 result에 기록
+    start = mid + 1
+
+# 정답 출력
+print(result)
+```

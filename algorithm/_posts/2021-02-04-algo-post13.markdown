@@ -1,0 +1,57 @@
+---
+layout: post
+related_posts:
+  - /algorithm/
+title: "가사 검색 - 2020 카카오 신입공채 1차 (이진 탐색)"
+date: 2021-02-04 03:57:39 +0530
+categories:
+  - algorithm
+description: >
+  '풀이시간 1시간 30분 , 시간제한 1초, 메모리제한 128MB, 2020 카카오 신입공채 1차 (취코테 370p)'
+---
+
+<br>
+[가사 검색 - 2020 카카오 신입공채 1차][kakao2020-lyric_search]
+<br>
+처음 봤을땐 query의 ?의 위치를 이진탐색하여 푸는 방법으로 접근하였다. 테스트 케이스도 모두 잘 출력되었으나, 제출했을땐 세가지 케이스에서 시간초과가 발생하였다. 다른방법을 보니 아주 간단하게 해결하는 방법이 있었다. bisect 라이브러리를 이용하는 것이다.<br>
+
+파이썬에서 문자열도 정렬을 지원하는걸 이용하면 이해가 쉽다. <br>
+가사의 각 길이는 최대 10000이므로 계수정렬의 방식으로 길이마다 가사들을 저장하는 테크닉을 이용하면 문제가 없다. 이렇게 했을 경우, 검색을 수행할때 쿼리의 길이에 해당하는 가사단어 배열을 검색하면 된다. <br>
+또한 쿼리문에서 ? 부분의 시작점을 a로 대체한 값을 left_value로 두고, z로 대체한 값을 right_value 값으로 두면 bisct_left와 bisect_right를 이용해 a와 z 사이의 가사는 모두 검색될 것이다. 즉 쿼리의 범위에 해당되는 가사의 갯수를 구할수 있다.<br>
+그러나 쿼리문에서 ?부분이 앞에 나오는 경우 탐색이 불가능해진다. 따라서 이 경우에는 슬라이싱을 이용하여 문자열을 거꾸로 뒤집는 방법을 이용하여 뒤집힌 가사단어 배열을 만들어주고 뒤집힌 쿼리문을 이용하여 뒤집힌 가사단어를 탐색해주면 된다. <br>
+물론 탐색전에 가사단어 배열들을 정렬을 해주고 탐색하여야 한다.
+
+<span style="color:blue; font-size: 20px">bisect 라이브러리를 활용한 해결법🧠</span>
+
+```python
+from bisect import bisect_left, bisect_right
+
+def count_by_range(arr, left_value, right_value):
+    left_index = bisect_left(arr, left_value)
+    right_index = bisect_right(arr, right_value)
+    return right_index - left_index
+
+
+def solution(words, queries):
+    words_arr = [[] for _ in range(10001)]
+    reverse_words_arr = [[] for _ in range(10001)]
+    answer = []
+    for word in words:
+        words_arr[len(word)].append(word)
+        reverse_words_arr[len(word)].append(word[::-1])
+
+    for i in range(10001):
+        words_arr[i].sort()
+        reverse_words_arr[i].sort()
+
+    for query in queries:
+        if query[-1] == '?':
+            answer.append(count_by_range(words_arr[len(query)], query.replace('?', 'a'), query.replace('?', 'z')))
+
+        else:
+            answer.append(count_by_range(reverse_words_arr[len(query)], query[::-1].replace('?', 'a'), query[::-1].replace('?', 'z')))
+
+    return answer
+```
+
+[kakao2020-lyric_search]: https://programmers.co.kr/learn/courses/30/lessons/60060

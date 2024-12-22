@@ -1,0 +1,36 @@
+---
+layout: post
+related_posts:
+  - /algorithm/
+title: "가장 긴 증가하는 부분 수열 (BOJ-11053)"
+date: 2021-02-26 17:37:40 +0530
+categories:
+  - algorithm
+description: >
+  '시간제한 1초, 메모리제한 256MB, BOJ-11053'
+---
+
+[가장 긴 증가하는 부분 수열 (BOJ-11053)][boj-11053]<br>
+시간제한이 짧고 부분수열의 최대 크기가 1000밖에 되지 않아 DP로 접근할 수 있다.<br>
+가장 긴 증가하는 부분 수열 문제를 LIS(Longest Increasing Subsequences)라고 하며, 전형적인 DP문제이다.
+
+이 문제는 리스트에 수열 전체를 저장하고 리스트들을 왼쪽에서부터 하나씩 자기자신보다 작은 값이 있는지 확인을 하는 방법을 이용하면 된다.<br>
+자기 자신의 왼쪽에 자기 자신보다 작은 수의 갯수를 저장하는 배열을 dp로 두면 된다. 여기서 dp를 초기화 할 때 자기자신도 부분 수열 길이 에 포함되므로 dp의 기본값은 1로 둔다.<br>
+dp를 저장할 때는 배열에서 자기 자신보다 작은 수인지 확인하고 작다면, 해당하는 작은 수의 dp(해당하는 작은수보다 작은 수의 갯수)와 해당하는 수와 자기자신을 합친 갯수(dp[i] + 1) 즉, 2랑 비교하여 큰 값을 dp로 저장하면 된다. <br>
+가장 긴 부분수열을 찾는게 목적이기 때문이다.<br><br>
+
+```python
+n = int(input())
+
+li = list(map(int, input().split()))
+dp = [1] * n
+
+for i in range(n):
+    for j in range(i):
+        if li[i] > li[j]:
+            dp[i] = max(dp[i], dp[j] + 1)
+
+print(max(dp))
+```
+
+[boj-11053]: https://www.acmicpc.net/problem/11053

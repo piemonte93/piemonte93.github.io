@@ -1,0 +1,46 @@
+---
+layout: post
+related_posts:
+  - /algorithm/
+title: "가장 긴 바이토닉 부분 수열 (BOJ-11054)"
+date: 2021-03-02 02:58:40 +0530
+categories:
+  - algorithm
+description: >
+  '시간제한 1초, 메모리제한 256MB, BOJ-11054'
+---
+
+[가장 긴 바이토닉 부분 수열 (BOJ-11054)][boj-11054]<br>
+역시 가장 긴 증가하는 부분 수열의 응용 문제이다. 따라서 DP로 해결하면 된다.<br>
+
+바이토닉 부분수열의 케이스들을 보면 한 숫자를 기준으로 왼쪽이 가장 긴 증가하는 부분 수열이고 우측이 가장 긴 감소하는 부분수열이다.<br>
+가장 긴 감소하는 부분 수열은 수열을 뒤에서 부터 읽었을때의 가장 긴 증가하는 부분 수열과 같은걸 이용하면 해결이 가능하다.<br>
+이렇게 구한 수열의 길이들을 합쳐준다. 그리고 한 숫자를 공유하므로 -1을 해주어야 한다.<br><br>
+
+<span style="color:red; font-size:20px">DP를 활용한 풀이</span><br>
+
+```python
+n = int(input())
+
+li = list(map(int, input().split()))
+dp = []
+dp1 = [1] * n
+dp2 = [1] * n
+
+for i in range(n):
+    for j in range(i):
+        if li[i] > li[j]:
+            dp1[i] = max(dp1[i], dp1[j] + 1)
+
+for i in range(n - 1, -1, -1):
+    for j in range(n - 1, i, -1):
+        if li[i] > li[j]:
+            dp2[i] = max(dp2[i], dp2[j] + 1)
+
+for i in range(n):
+    dp.append(dp1[i] + dp2[i] - 1)
+
+print(max(dp))
+```
+
+[boj-11054]: https://www.acmicpc.net/problem/11054

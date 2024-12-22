@@ -1,0 +1,49 @@
+---
+layout: post
+related_posts:
+  - /algorithm/
+title: "계단 오르기 (BOJ-2579)"
+date: 2021-03-02 03:37:40 +0530
+categories:
+  - algorithm
+description: >
+  '시간제한 1초, 메모리제한 128MB, BOJ-2579'
+---
+
+[계단 오르기 (BOJ-2579)][boj-2579]<br>
+이 문제는 전에 풀었던 동적계획 문제인 포도주 시식 문제와 아주 유사하다. 연속해서 3개를 밟지 못하는것도 비슷하지만 여기선 마지막 계단을 무조건 밟아야 한다.<br>
+계단을 뒤에서부터 볼 떄 계단을 밟을 수 있는 경우는 다음과 같다.<br>
+
+![DP Solving](/assets/image/BOJ2579.jpg)
+계단을 밟을 수 있는 경우 중에 마지막 계단을 밟을 수 없는 경우는 제외한다.<br>
+이를 통해 구한 점화식은 다음과 같다.<br><br><br>
+<span style="color:blue; font-size:20px">dp[i] = max(dp[i-3] + li[i-1] + li[i], dp[i-2] + li[i])</span><br><br><br>
+이렇게 dp를 기록하면 dp의 마지막 요소를 출력하면 최댓값이 된다.<br><br>
+
+```python
+n = int(input())
+
+li = []
+
+for i in range(n):
+    li.append(int(input()))
+
+dp = [0] * n
+
+if n == 1:
+    dp[0] = li[0]
+
+elif n == 2:
+    dp[1] = li[0] + li[1]
+
+else:
+    dp[0] = li[0]
+    dp[1] = li[0] + li[1]
+    dp[2] = max(li[0] + li[2], li[1] + li[2])
+    for i in range(3, n):
+        dp[i] = max(dp[i-2] + li[i], dp[i - 3] + li[i-1] + li[i])
+
+print(dp[n-1])
+```
+
+[boj-2579]: https://www.acmicpc.net/problem/2579

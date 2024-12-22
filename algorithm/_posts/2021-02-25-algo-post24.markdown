@@ -1,0 +1,58 @@
+---
+layout: post
+related_posts:
+  - /algorithm/
+title: "1, 2, 3 더하기 (BOJ-9095)"
+date: 2021-02-25 22:40:40 +0530
+categories:
+  - algorithm
+description: >
+  '풀이시간 20분 , 시간제한 1초, 메모리제한 512MB, BOJ-9095'
+---
+
+[1, 2, 3 더하기 (BOJ-9095)][boj-9095]<br>
+처음 제출했을때 런타임 에러가 나와서 왜그런가 했는데 n이 1일때와 2일때 3일때 예외를 설정해두지 않으면 초기화한 dp의 인덱스 범위를 초과해서 index 범위 에러가 발생하였다. 그래서 따로 예외를 두었다.<br>
+
+dp[i]를 i를 계산 가능한 경우의 수라고 하면, dp[1]은 1 만 있으면 되므로 경우의 수는 1이다.<br>
+dp[2]는 1 + 1와 2로 나타낼 수 있으므로 경우의 수는 2 이다.<br>
+dp[3]은 1 + 1 + 1과 1 + 2, 2 + 1, 3이므로 경우의 수는 4이다.<br>
+점화식 계산에서 이용하는것은 이 3가지만 고려하면 된다. 이용 가능한 수가 3까지이기 때문이다.<br>
+위의 식들을 보고 i = 4 이상의 경우의 수를 점화식으로 나타내면 dp[i] = dp[i - 3] + dp[i - 2] + dp[i - 1]이 된다.<br><br>
+
+```python
+for _ in range(int(input())):
+    n = int(input())
+    if n == 1:
+        print(1)
+    elif n == 2:
+        print(2)
+    elif n == 3:
+        print(4)
+
+    else:
+        dp = [0] * (n + 1)
+        dp[1] = 1
+        dp[2] = 2
+        dp[3] = 4
+
+        for i in range(4, n + 1):
+            dp[i] = dp[i - 3] + dp[i - 2] + dp[i - 1]
+
+        print(dp[n])
+```
+
+이후에 다른분들이 푼걸 봤는데 엄청 신박하게 해결한 분이 계셨다. 역시 파이썬에서는 리스트 슬라이싱을 잘 이용해야 한다고 느꼈다;;<br><br>
+<span style="color: blue; font-size:20px">아주 간결한 풀이🤭</span>
+
+```python
+N = int(input())
+arr=[1,2,4]
+for i in range(4,11):
+    arr.append(sum(arr[-3:]))
+for _ in range(N):
+    T = int(input())
+    print(arr[T-1])
+
+```
+
+[boj-9095]: https://www.acmicpc.net/problem/9095

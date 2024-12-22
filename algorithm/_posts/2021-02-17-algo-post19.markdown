@@ -1,0 +1,65 @@
+---
+layout: post
+related_posts:
+  - /algorithm/
+title: "경쟁적 전염 - BOJ 18405"
+date: 2021-02-17 16:38:40 +0530
+categories:
+  - algorithm
+description: >
+  '풀이시간 50분 , 시간제한 1초, 메모리제한 256MB, BOJ 18405 (취코테 344p)'
+---
+
+<br>
+[경쟁적 전염 - BOJ 18405][boj-18405]
+<br>
+바이러스가 초당 상하좌우로 한칸씩 퍼지는것과 바이러스 종류가 오름차순으로 순서대로 퍼지는걸 생각하면 BFS를 이용하면 큐가 순서대로 해당 프로세스를 수행할 수 있다는걸 알 수 있다.<br>
+
+바이러스의 정보(바이러스 종류, 해당위치에 존재했던 시간, 바이러스의 x좌표, 바이러스의 y좌표)를 저장하여 이용하여야 한다. 이를 위해 빈 리스트 data를 생성한다. <br>
+그래프를 입력받을 때 마다 바이러스가 존재하는지 확인하고 있다면 해당 바이러스의 정보를 data에 집어넣는다.<br>
+이 데이터를 큐에 집어넣고 BFS를 이용하여 바이러스를 퍼트린다.<br>
+단, 큐가 빌때까지 돌리되, 만약 목표로 하는 시간 s에 도달할 경우 종료하는걸 생각해둬야 한다.<br><br>
+
+```python
+from collections import deque
+from sys import stdin
+
+n, k = map(int, input().split())
+
+data = [] # 바이러스의 데이터 저장
+graph = []
+
+for i in range(n):
+  graph.append(list(map(int, stdin.readline().rstrip().split())))
+  for j in range(n):
+    if graph[i][j] != 0: # 바이러스가 존재한다면
+      data.append((graph[i][j], 0, i, j)) # 바이러스의 종류, 해당 바이러스가 있는 시간, 위치 x, 위치 y 순으로 data에 저장
+
+data.sort()
+q = deque(data)
+
+# 찾는 시간, 탐색을 원하는 x 좌표, 탐색을 원하는 y좌표를 입력
+target_s, target_x, target_y = map(int, input().split())
+
+dx = [-1, 1, 0, 0]
+dy = [0, 0, -1, 1]
+
+while q:
+  virus, s, x, y = q.popleft()
+
+  if s == target_s: # 찾는 시간이 되면 종료
+    break
+
+  for i in range(4): # 초당 상하좌우 1칸씩 퍼트린다
+    nx = x + dx[i]
+    ny = y + dy[i]
+
+    if nx >= 0 and ny >= 0 and nx < n and ny < n:
+      if graph[nx][ny] == 0: # 빈 자리라면
+        graph[nx][ny] = virus # 바이러스가 퍼진다
+        q.append((virus, s+1, nx, ny)) # 1초가 지난 후에 생긴 바이러스의 종류 및 위치를 큐에 저장
+
+print(graph[target_x - 1][target_y - 1])
+```
+
+[boj-18405]: https://www.acmicpc.net/problem/18405
