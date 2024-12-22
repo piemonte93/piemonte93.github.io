@@ -60,7 +60,7 @@ menu:
       - title:      HTML CSS
         url:        /htmlcss/
       - title:      Javascript
-        url:        /js/
+        url:        /javascript/
       - title:      React
         url:        /react/
   - title:         BACKEND

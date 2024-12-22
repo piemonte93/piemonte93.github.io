@@ -1,12 +1,12 @@
 ---
 layout: post
 related_posts:
-  - /frontend/js/
+  - /frontend/javascript/
 title: "Canvas API"
 date: 2024-12-22 23:47:47 +0900
 categories:
   - frontend
-  - js
+  - javascript
 description: >
   'Canvas API를 이용하여 Javascript만으로 그림을 그릴수가 있다.'
 ---
