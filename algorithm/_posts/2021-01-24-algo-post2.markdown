@@ -2,9 +2,9 @@
 layout: post
 related_posts:
   - /algorithm/
-title:  "코딩 테스트 할 때 Python에서 자주\n\쓰는 방법들"
+title:  "코딩 테스트 할 때 Python에서 자주쓰는 방법들"
 date: 2021-01-24 08:18:36 +0530
-categories: 
+categories:
   - algorithm
 description: >
   '코딩테스트 문제를 풀다보면 분명 아는것인데 손에서 바로 안나올 때가 있는 기술들이 있다. 코딩테스트를 보기 전에 한번 읽고 들어가기 위해 이 문서를 정리한다.'
