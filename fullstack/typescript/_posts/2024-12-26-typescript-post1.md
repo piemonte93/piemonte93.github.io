@@ -3,7 +3,7 @@ layout: post
 related_posts:
   - /fullstack/typescript/
 title: "Javascript를 이용하지 않고 Typescript를 이용하는 이유"
-date: 2024-12-22 23:39:47 +0900
+date: 2024-12-25 00:26:47 +0900
 image: 
   path: ../../../assets/img/img-folder/ts-image.png
 categories:
