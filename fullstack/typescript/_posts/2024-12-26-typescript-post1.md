@@ -68,6 +68,7 @@ let b : string = “abcd” // 변수의 타입을 명시적으로 정의
 let c : number[] = [] // 숫자가 들어가는 배열인것을 명시
 c.push(1)
 ~~~
-가능한 Typescript가 추론하도록 명시하지 않는편이 편하다.{:.message}
+가능한 Typescript가 추론하도록 명시하지 않는편이 편하다.
+{:.message}
 
 추가적인 Typescript 문법은 나중에 더 올릴 예정이다.
