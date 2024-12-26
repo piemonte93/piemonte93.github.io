@@ -13,7 +13,6 @@ description: >
   'Javascript를 이용하지 않고 Typescript를 이용하는 이유는 안정성에 있다고 생각한다.'
 ---
 
-<br>
 
 Javascript를 안쓰고 Typescript를 쓰는 이유는 안정성, 더 정확히 말하면 타입 안정성에 있다고 생각한다. 이로 인해 얻을 수 있는 이점들이 있다.
 
