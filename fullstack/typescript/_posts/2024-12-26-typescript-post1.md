@@ -49,26 +49,4 @@ piemonte.hello();
 **Typescript는 Strongly Typed Language(강타입 언어)이다. <br> 일반적인 컴파일러 언어들은 컴파일 시 어셈블리 코드나 바이트 코드가 되지만, Typescript는 컴파일 하면 Javascript 파일이 생성된다. Web은 Typescript를 이해할 수 없고 Javascript로 이해할 수 있기 때문이다. Node.js는 TS, JS 양쪽 모두 이해할 수 있다.**
 {:.message}
 
-<br>
-Typescript는 변수 생성시 변수의 타입을 명시할 수 있다.
-
-~~~ts
-let a: number = 1;
-~~~
-위 코드는 변수 a를 생성할때 타입을 number로 명시해줘야 한다. 만약 다른 타입의 값을 넣으려 한다면 에러를 띄운다.
-~~~ts
-let a: number = 1;
-a = “hello”; // 에러
-~~~
-
-Typescript는 데이터와 변수의 타입을 명시적으로 정의할 수도 있고 아니면 Javascript처럼 변수만 생성하고 넘어가도 된다. 후자의 방식으로 할 경우 Typescript는 타입을 대입값에 맞추어 추론한다.
-~~~ts
-let a = 1 // 변수만 생성. 대입된 1의 값을 통해 typescript에서 타입을 int로 추론함
-let b : string = “abcd” // 변수의 타입을 명시적으로 정의
-let c : number[] = [] // 숫자가 들어가는 배열인것을 명시
-c.push(1)
-~~~
-가능한 Typescript가 추론하도록 명시하지 않는편이 편하다.
-{:.message}
-
-추가적인 Typescript 문법은 나중에 더 올릴 예정이다.
+Typescript 문법은 추가적으로 정리해서 포스팅 할 예정이다.
