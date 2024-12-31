@@ -34,6 +34,8 @@ switch (option) {
 자바의 신문법으로써 switch문을 줄여서 쓰는 방법이다.
 {:.note.smaller}
 
+<br>
+
 ~~~java
 case 1 : {
 		System.out.print("학생 이름을 입력하세요: ");
