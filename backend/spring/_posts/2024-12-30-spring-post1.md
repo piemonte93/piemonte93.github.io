@@ -2,9 +2,9 @@
 layout: post
 related_posts:
   - /backend/spring/
-title: "Springboot DSA 수업 정리"
+title: "Springboot DSA 수업 정리 - (1)"
 image: 
-  path: https://velog.velcdn.com/images/kkeun0_dev/post/6938da62-d9d6-422a-bc77-3f60aaa3bd66/image.png
+  path: ../../../assets/img/img-folder/springboot-img.jpg
 date: 2024-12-30 12:40:40 +0900
 categories:
   - backend
@@ -55,15 +55,15 @@ StudentController
 StudentRepositoryImpl 의존성 X
 
 객체지향 설계의 5대 원칙(SOLOD)
-- 1. SRP (Single Responsibility Principle): 단일책임 원칙
+1. SRP (Single Responsibility Principle): 단일책임 원칙
 	- 하나의 클래스는 하나의 책임만 가져야 한다.
-- 2. OCP(Open/Closed Principle) : 개방-폐쇄 원칙
+2. OCP(Open/Closed Principle) : 개방-폐쇄 원칙
 	- 클래스, 모듈, 함수는 확장에 열려있고 수정에는 닫혀있어야한다.
-- 3. LSP(Liskov Substitution Principle) : 리스코프 치환 원칙
+3. LSP(Liskov Substitution Principle) : 리스코프 치환 원칙
 	- 자식 클래스는 언제나 부모 클래스를 대체할 수 있어야한다.
-- 4. ISP(Interface Segregation Principle): 인터페이스 분리 원칙
+4. ISP(Interface Segregation Principle): 인터페이스 분리 원칙
 	- 클라이언트가 자신이 사용하지 않는 메서드에 의존하지 않도록 인터페이스를 분리해야 한다.
-- 5. DIP(Dependency Inversion Principle): 의존관계 역전 원칙
+5. DIP(Dependency Inversion Principle): 의존관계 역전 원칙
 	- 구체적인 구현 클래스가 아닌 추상화에 의존하도록 설계해야 한다.
 
 파일로 저장하는 클래스를 추가로 만들었는데(확장), 원래 소스코드를 수정하는것은 좋은 코드가 아니다. (2번 원칙 위배)
