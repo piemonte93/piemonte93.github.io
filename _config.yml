@@ -72,6 +72,11 @@ menu:
         url:        /nodejs/
       - title:      Flask Django
         url:        /flaskdjango/
+  - title:         DATABASE
+    url:           /database/
+    submenu:
+      - title:     Mysql
+        url:       /mysql/
   - title:         FULL STACK
     url:           /fullstack/
     submenu:
