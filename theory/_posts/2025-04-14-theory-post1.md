@@ -13,7 +13,7 @@ description: >
 1. 프로그래밍 공통
 
  - Restfull API란?
- - CORS( Cros-Origin Resource Sharing)
+ - CORS(Cros-Origin Resource Sharing)
  - 절차지향 프로그래밍과 객체지향 프로그래밍의 차이
  - 대칭키와 비대칭키 암호화 방식
  - TDD(Test Driven Development)의 개념
