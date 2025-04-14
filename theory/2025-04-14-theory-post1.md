@@ -2,7 +2,7 @@
 layout: post
 related_posts:
   - /theory/
-title:  "기술면접 준비"
+title: "기술면접 준비"
 date: 2025-04-14 09:32:40 +0900
 categories:
   - theory
