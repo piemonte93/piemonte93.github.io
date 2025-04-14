@@ -6,6 +6,7 @@ title: "기술면접 준비"
 date: 2025-04-14 09:32:40 +0530
 categories:
   - theory
+tags: [theory]
 description: >
   '일본 기업 기술면접 준비에 관한 정리'
 ---
