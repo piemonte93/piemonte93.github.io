@@ -3,8 +3,6 @@ layout: post
 related_posts:
   - /theory/
 title: "기술면접 준비"
-image: 
-  path: 
 date: 2025-04-14 09:32:40 +0530
 categories:
   - theory
