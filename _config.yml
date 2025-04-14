@@ -84,7 +84,7 @@ menu:
         url:       /typescript/
       - title:     Next.js
         url:       /nextjs/
-  - title :        이론 정리
+  - title :        Theory
     url:           /theory/
   - title:         일상
     url:           /daily/
