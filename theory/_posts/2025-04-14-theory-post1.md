@@ -13,9 +13,9 @@ description: >
 
 ## 프로그래밍 공통
 
-Restfull API란?
+Restful API란?
 
-CORS( Cros-Origin Resource Sharing)
+CORS(Cross-Origin Resource Sharing)
 
 절차지향 프로그래밍과 객체지향 프로그래밍의 차이
 
