@@ -72,10 +72,10 @@ description: >
 
 ## 자바 프로그래밍
 
- ### Java 메모리 구조
+### Java 메모리 구조
 - Javaのメモリ構造は主に、ヒープ（オブジェクト格納）、スタック（メソッド呼び出しとローカル変数）、メソッドエリア（クラス情報）、PCレジスタ（実行中の命令アドレス）、ネイティブメソッドスタック（ネイティブコード用）に分かれています。
 
- ### Java 프로그래밍 언어의 주요 특징은?
+### Java 프로그래밍 언어의 주요 특징은?
 
  - プラットフォーム独立性：JVMを通じて「Write Once, Run Anywhere」を実現
  - オブジェクト指向：カプセル化、継承、多態性をサポート
@@ -86,14 +86,14 @@ description: >
  - 豊富なライブラリ：標準APIと大規模なエコシステム
  - 堅牢性：例外処理や型安全性による信頼性の高いコード
 
- ### Java의 기본 데이터 타입은 무엇이 있나요
+### Java의 기본 데이터 타입은 무엇이 있나요
  - Javaの基本データ型は8つあります：
   1. 整数型：byte（8ビット）、short（16ビット）、int（32ビット）、long（64ビット）
   2. 浮動小数点型：float（32ビット）、double（64ビット）
   3. 文字型：char（16ビット、Unicode）
   4. 論理型：boolean（true/false）
 
- ### Wrapper Class란 무엇이며, Boxing와 UnBoxing의 의미는?
+### Wrapper Class란 무엇이며, Boxing와 UnBoxing의 의미는?
  1. ラッパークラス（Wrapper Class）とは：
  - Javaのプリミティブ型（int、char、booleanなど）をオブジェクトとして扱うためのクラス
  - 例：Integer（int）、Character（char）、Boolean（boolean）、Double（double）など
@@ -112,7 +112,7 @@ description: >
  - 明示的な変換コードなしに、コンパイラが自動的に変換を行う
  - 例：Integer sum = 10 + new Integer(5);（自動的に変換処理が行われる）
  
- ### 리플렉션(Reflection)이란
+### 리플렉션(Reflection)이란
  - リフレクションとは、実行時にプログラムが自分自身のクラス、メソッド、フィールドなどの構造を調査し、操作できる機能です。
 
  1. 主な特徴：
@@ -140,17 +140,17 @@ method.invoke(instance);
 
 <hr>
 
- ### CheckedException와 UnCheckedException의 차이는?
+### CheckedException와 UnCheckedException의 차이는?
  - CheckedException（検査例外）: コンパイル時に検出される例外
  - UncheckedException（非検査例外）: 実行時に検出される例外
 
- ### 객체 지향 프로그래밍의 네 가지 기본 원칙은 무엇인가?
+### 객체 지향 프로그래밍의 네 가지 기본 원칙은 무엇인가?
   1. カプセル化：データと操作をオブジェクト内に隠蔽
   2. 継承：既存クラスの特性を新しいクラスに引き継ぐ
   3. 多態性：同じインターフェースで異なる実装を提供
   4. 抽象化：複雑さを隠し、本質的な特性だけを表現
 
- ### static 키워드의 사용 예와 그 의미는 무엇인가?
+### static 키워드의 사용 예와 그 의미는 무엇인가?
  - staticキーワードは「クラスに属する」という意味を持ち、インスタンス化せずに使用できる要素を定義します。
  
  主な使用例と意味
@@ -199,7 +199,7 @@ method.invoke(instance);
    // 使用例: double area = PI * radius * radius;
   ~~~
 
- ### 가비지 컬렉션(Garbage Collection) 어떻게 작동하는가?
+### 가비지 컬렉션(Garbage Collection) 어떻게 작동하는가?
  - ガベージコレクション（GC）は、プログラムの実行中に不要になったオブジェクト（メモリ）を自動的に回収する仕組みです。これにより、メモリリークを防ぎ、効率的なメモリ管理が可能になります。
 
  代表的なアルゴリズムとしては、以下のようなものがあります：
@@ -219,89 +219,90 @@ method.invoke(instance);
 
 このように、ガベージコレクションはプログラムのパフォーマンスと安定性において非常に重要な役割を果たしています。
  
- ### 배열과 ArrayList의 차이점은 무엇인가?
+### 배열과 ArrayList의 차이점은 무엇인가?
  
- ### try-with-resources 문은 어떤 경우에 사용되나?
+### try-with-resources 문은 어떤 경우에 사용되나?
  
- ### interface와 abstract class의 차이점은 무엇인가?
+### interface와 abstract class의 차이점은 무엇인가?
  
- ### == 연산자와 .equals() 메서드의 차이점은 무엇인가?
+### == 연산자와 .equals() 메서드의 차이점은 무엇인가?
  
- ### 상속이란 무엇가?
+### 상속이란 무엇가?
  
- ### 오버로딩과 오버라이딩의 차이는 무엇인가?
+### 오버로딩과 오버라이딩의 차이는 무엇인가?
  
- ### 예외 처리에서 try, catch, finally 블록의 역할은 무엇인가?
+### 예외 처리에서 try, catch, finally 블록의 역할은 무엇인가?
  
- ### final, finally, finalize의 차이점은 무엇인가?
+### final, finally, finalize의 차이점은 무엇인가?
  
- ### 컬렉션 프레임워크란 무엇인가?
+### 컬렉션 프레임워크란 무엇인가?
  
- ### HashMap과 HashTable의 차이점은 무엇인가?
+### HashMap과 HashTable의 차이점은 무엇인가?
  
- ### 동기화(Synchronization)의 목적은 무엇인가?
+### 동기화(Synchronization)의 목적은 무엇인가?
  
- ### 제네릭(Generic)의 이점은 무엇인가?
+### 제네릭(Generic)의 이점은 무엇인가?
  
- ### 동기화 블록(Synchronized Block)과 동기화 메서드(Synchronized Method)의 차이점은 무엇인가?
+### 동기화 블록(Synchronized Block)과 동기화 메서드(Synchronized Method)의 차이점은 무엇인가?
  
- ### Java 8에서 추가된 람다 표현식(Lambda Expression)의 장점과 사용 예는 무엇인가?
+### Java 8에서 추가된 람다 표현식(Lambda Expression)의 장점과 사용 예는 무엇인가?
  
- ### 스트림(Stream) API는 어떤 목적으로 사용되나?
+### 스트림(Stream) API는 어떤 목적으로 사용되나?
  
- ### Optional 클래스의 목적과 사용법은 무엇인가?
+### Optional 클래스의 목적과 사용법은 무엇인가?
 
 
 ## 네트워크
- ### HTTP 프로토콜
+### HTTP 프로토콜
  
- ### HTTP와 HTTPS의 차이점
+### HTTP와 HTTPS의 차이점
  - HTTPは平文でデータを送受信するプロトコルで、セキュリティ保護がありません。HTTPSはSSL/TLSによる暗号化を追加し、通信の機密性、完全性、認証を提供します。HTTPはポート80、HTTPSはポート443を使用します。
 
- ### 쿠키와 세션의 차이점
+### 쿠키와 세션의 차이점
  - クッキーはクライアント側に保存される小さなデータで、ブラウザがサーバーにリクエストを送る際に一緒に送信されます。セッションはサーバー側でユーザー情報を保持する仕組みで、通常セッションIDをクッキーに保存してユーザーを識別します。
 
- ### TCP와 UDP의 차이
+### TCP와 UDP의 차이
  - TCPは接続指向で信頼性の高いプロトコルです。データの順序保証、エラー検出、再送機能があります。UDPは非接続型で信頼性は低いですが、オーバーヘッドが少なく高速です。リアルタイム性が重要な用途（ストリーミング、ゲームなど）に適しています。
- ### OSI 7 계층
+
+### OSI 7 계층
  
- ### HTTP Method의 종류
+### HTTP Method의 종류
  
- ### GET과 POST의 차이
+### GET과 POST의 차이
  
- ### 세션 기반 인증과 토큰 기반 인증의 차이점
+### 세션 기반 인증과 토큰 기반 인증의 차이점
  
- ### Stateful한 세션 기반의 인증 방식의 단점
+### Stateful한 세션 기반의 인증 방식의 단점
  
- ### 세션 기반 인증과 토큰 기반 인증은 어느경우에 적합한가
+### 세션 기반 인증과 토큰 기반 인증은 어느경우에 적합한가
  
- ### JWT란?
+### JWT란?
  
- ### 공인 IP와 사설 IP의 차이
+### 공인 IP와 사설 IP의 차이
 
 
 ## 데이터베이스
- ### 데이터베이스의 특징
+### 데이터베이스의 특징
  - インデックスはデータベースのテーブルに対する検索を高速化するデータ構造です。特定のカラムに対して作成され、B木やハッシュ表などの構造を使ってデータへの効率的なアクセスを提供します。検索速度は向上しますが、挿入・更新操作のオーバーヘッドが増加します。
 
- ### DDL, DML, DCL
+### DDL, DML, DCL
 
- ###트리거란?
+###트리거란?
 
- ### Index란?
+### Index란?
  
- ### SQL Injection란?
+### SQL Injection란?
  - SQLインジェクションは、ユーザー入力を適切に検証せずにSQLクエリに組み込むことで発生する攻撃です。攻撃者は悪意のあるSQLコードを注入し、データベースの不正アクセス、データ漏洩、データ破壊などを引き起こす可能性があります。パラメータ化クエリやORMを使用して防止できます。
  
- ### ORM 이란
+### ORM 이란
 
- ### Having과 Where의 차이
+### Having과 Where의 차이
 
 
 ## 스프링, 스프링부트
- ### WAS(Web Application Server)와 WS(Web Server)의 차이
+### WAS(Web Application Server)와 WS(Web Server)의 차이
  
- ### Spring Framework의 특징
+### Spring Framework의 특징
  - Spring Frameworkの主な特徴：
   1. DI（依存性注入）とIoC（制御の反転）によるコンポーネント管理
   2. AOP（アスペクト指向プログラミング）によるクロスカッティングコンサーン
@@ -310,23 +311,23 @@ method.invoke(instance);
   5.テスト容易性の向上
   6.他フレームワークとの統合性
 
- ### @RequestBody, @RequestParam, @ModelAttirbute의 차이
+### @RequestBody, @RequestParam, @ModelAttirbute의 차이
  
- ### Spring Boot와 Spring Framework의 차이점
+### Spring Boot와 Spring Framework의 차이점
  - Spring Bootは、Spring Frameworkの上に構築された拡張で、「設定より規約」の原則に従います。自動設定、組み込みサーバー、スターター依存関係、アクチュエーターなどの機能により、最小限の設定でSpringアプリケーションを素早く構築できます。SpringFrameworkが基盤技術を提供するのに対し、Spring Bootは開発効率と生産性向上に焦点を当てています。
 
- ### Spring MVC란?
+### Spring MVC란?
  
- ### 제어의 역전(IoC, Inverion of Control)
+### 제어의 역전(IoC, Inverion of Control)
  
- ### 스프링에서 빈을 등록하는 방법
+### 스프링에서 빈을 등록하는 방법
  
- ### 의존성 주입(DI, Dependency Injection)의 방법
+### 의존성 주입(DI, Dependency Injection)의 방법
  
- ### 관점지향 프로그래밍(APO, Aspect Oriented Programming)
+### 관점지향 프로그래밍(APO, Aspect Oriented Programming)
  
- ### VO, DAO, DTO
+### VO, DAO, DTO
  
- ### 싱글톤 패턴이란?
+### 싱글톤 패턴이란?
  
- ### JPA, 마이바티스 등에서 N+1 문제의 의미와 발생하는 이유는?
+### JPA, 마이바티스 등에서 N+1 문제의 의미와 발생하는 이유는?
