@@ -1,9 +1,11 @@
 ---
 layout: post
-title: "기술면접 준비"
+related_posts:
+  - /theory/
+title:  "기술면접 준비"
 date: 2025-04-14 09:32:40 +0900
-categories: theory
-tags: theory
+categories:
+  - theory
 description: >
   '일본 기업 기술면접 준비에 관한 정리'
 ---
