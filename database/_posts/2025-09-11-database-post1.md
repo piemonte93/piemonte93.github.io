@@ -15,11 +15,11 @@ description: >
 <br>
 
 ## Key-Value Database
-![database image](../../../piemonte93.github.io/assets/img/img-folder/key-value.png)<br>
+![database image](../../assets/img/img-folder/key-value.png)<br>
 
 - 너무 간단해 보여서 쓸모가 없어보이는데 맞다 쓸모가 없다. 서브용 DB로 쓰거나 그게 전부다.
 - 그런데 Redis라는 특수한 기능을 가진 Key-Value 데이더베이스가 있다.
-![database image](../../../piemonte93.github.io/assets/img/img-folder/redis.png)<br>
+![database image](../../assets/img/img-folder/redis.png)<br>
 - 이 친구는 되게 많이쓴다. 데이터를 하드디스크에 저장하지 않고, RAM에 저장을 한다. 왜냐하면 RAM이 하드보다 훨씬 빠르기 때문이다. 물론 하드에 백업은 해둔다. 메인 DB를 두고 사람들이 자주 쓰는 데이터를 redis 에 추가적으로 복사를 해둔다. 그러면 데이터 요청시 메인 DB가 아닌 redis에서 꺼내서 쓰면 속도가 빠르기때문에 효율적이다.
 - 자주쓰는 데이터 캐싱, 채팅을 위한 pub/sub, 영상 스트리밍, 로그인 기록 저장 등에 활용한다
 - 요즘은 redis 하나로 모든걸 다 할수 있는 redis 업글버전도 있는거 같은데 아무도 안씀
@@ -29,7 +29,7 @@ description: >
 - 내가 각잡는걸 좋아해서 데이터를 표 형태로 저장하고 싶다? 유구한 역사와 전통의 관계형 데이터베이스를 사용하자.
 - 럭키 엑셀임
 - 대량의 데이터를 저장하려면 Oracle, MySQL, PostgreSQL등을 사용하는 경우가 많다.
-![database image](../../../piemonte93.github.io/assets/img/img-folder/rdbms.png)<br>
+![database image](../../assets/img/img-folder/rdbms.png)<br>
 - 다양한곳에서 일반적으로 사용할수 있다보니 데이터베이스 점유율을 보면 상위권은 전부 관계형 DB임
 ![database image](../../assets/img/img-folder/stackoverflow.png)<br>
 - 해당 DB에 데이터를 저장하고 싶다? Structed Query Language(SQL)이라는 문법을 이용해야함.
