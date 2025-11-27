@@ -13,6 +13,7 @@ description: >
   '개발하면서 은근 자주 찾아볼 수 있는 this 키워드는 뜻이 매우 다양하다. 사용하는 환경에 따라서 4개 이상의 각각 다른 뜻을 가지고 있는데  이번 기회에 총정리해보자.'
 ---
 
+
 ## 1-1. 그냥 쓰거나 함수 안에서 쓰면 this는 window를 뜻한다.
 
 그냥 HTML 파일 아무거나 하나 만들고 중간에 `<script>`태그 열어서 일단 this라는 키워드를 콘솔창에 출력해보자.
@@ -36,9 +37,9 @@ function 간지나는함수() {
 이것이 this의 첫째 뜻이다. 그냥 window다.
 
 <span style="color:#EBE1AB">Q. window가 뭔가요?</span>
-</br>
+<br>
 <span style="color:#EBE1AB">A. window는 모든 전역변수, 함수, DOM을 보관하고 관리하는 전역객체입니다.</span>
-</br>
+<br>
 
 라고 구글검색 번역투로 설명하면 솔직히 이해가 안되니 좀 쉽게 비유해보자면 우리가 쓰는 자바스크립트 함수 document.getElementById(), alert(), console.log()
 이런 함수들을 보관하는 보관소이다. 보관소는 특별한건 아니고 그냥 큰(오브젝트)일 뿐이다.
@@ -55,7 +56,7 @@ function 간지나는함수() {
 아무튼 그냥 보관소이다. 끝!
 
 <span style="color:#EBE1AB">Q. \*전역변수 : 코드 내 모든 곳에서 참조해서 쓸 수 있는 범용적인, 범위가 넓은 변수입니다. 그냥 script태그 내에 쌩으로 var 변수 하나 만들면 그건 자연스레 전역변수가 됩니다. </span>
-</br>
+<br>
 
 ## 1-2. strict mode일 때 함수 안에서 쓰면 this는 undefined 이다.
 
