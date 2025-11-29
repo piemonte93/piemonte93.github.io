@@ -95,8 +95,8 @@ document.getElementById('버튼').addEventListener('click', function(e) {
 forEach() 반복문을 사용할 땐 안에 function(){} 콜백함수를 집어넣어서 사용하게 되어있다. 그래서 넣었다.<br>
 <span style="color:#EBE1AB">(* 콜백함수는 그냥 함수 안에 파리미터역할로 들어가는 함수를 뜻한다. 그게 다임)</span><br>
 하지만 솔직히 forEach가 무슨 역할을 하는지는 몰라도 이건 알수 있다.
-
 <br>
+
 <span style="color:#EBE1AB">Q. 위의 코드에서 this를 출력하면 무엇이 나올까?</span>
 > <details>
 > <summary>뭐가 나오냐면</summary>
@@ -114,6 +114,7 @@ forEach() 반복문을 사용할 땐 안에 function(){} 콜백함수를 집어�
 > <br>
 > this의 값은 this가 어떤 함수안에 들어있는지만 잘 체크하면 바로 알 수 있다.
 > </details>
+
 <br>
 <br>
 <br>
