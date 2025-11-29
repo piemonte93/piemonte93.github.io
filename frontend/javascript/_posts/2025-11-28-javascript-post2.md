@@ -144,14 +144,14 @@ var 오브젝트2 = {
 그러면 머리에 잘 남는다.
 생각을 했으면 직접 출력해서 머릿속의 답과 비교해보자.
 
-<details>
-<summary>답이 무엇이냐면</summary>
-별거없고 오브젝트의 메소드안에서 썼을 때 this는 메소드를 담고있는 주인님을 뜻하기 때문에
+> <details>
+> <summary>답이 무엇이냐면</summary>
+> 별거없고 오브젝트의 메소드안에서 썼을 때 this는 메소드를 담고있는 주인님을 뜻하기 때문에 <br>
 
-간지함수()를 담고있는 주인님인 <span style="color:#EBE1AB">오브젝트2.data</span> 라는게 위의 this랑 동일한 뜻이다. 
+> 간지함수()를 담고있는 주인님인 <span style="color:#EBE1AB">오브젝트2.data</span> 라는게 위의 this랑 동일한 뜻이다. <br>
 
-둘다 각각 출력해보면 된다. 
-</details>
+> 둘다 각각 출력해보면 된다. 
+> </details>
 
 
 <br>
@@ -228,10 +228,11 @@ var 오브젝트2 = {
 this는 아까 2번에 의하면 내 메소드를 포함하고 있는 주인님 오브젝트를 출력시켜 준다고 했다?
 <span style="color:#EBE1AB">간지나는함수()</span>를 포함하고 있는 주인님 오브젝트가 무엇일까?
 
-<details>
-<summary>여기서의 this는 무엇일까?</summary>
-안알랴줌 직접 출력해서 보셈 ㅋ
-</details>
+> <details>
+> <summary>여기서의 this는 무엇일까?</summary>
+> 안알랴줌 직접 출력해서 보셈 ㅋ
+> </details>
+
 <br>
 그래서 1번 :this를 함수 안에서 썼을 땐 window가 나온다~ 라는건 안외워도 되고
 <span style="color:#EBE1AB">2번 : this는 오브젝트 내의 메소드(함수)에서 사용했을 때 메소드의 주인님 오브젝트를 출력해준다~
