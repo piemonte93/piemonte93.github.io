@@ -147,9 +147,7 @@ var 오브젝트2 = {
 > <details>
 > <summary>답이 무엇이냐면</summary>
 > 별거없고 오브젝트의 메소드안에서 썼을 때 this는 메소드를 담고있는 주인님을 뜻하기 때문에 <br>
-
 > 간지함수()를 담고있는 주인님인 <span style="color:#EBE1AB">오브젝트2.data</span> 라는게 위의 this랑 동일한 뜻이다. <br>
-
 > 둘다 각각 출력해보면 된다. 
 > </details>
 
