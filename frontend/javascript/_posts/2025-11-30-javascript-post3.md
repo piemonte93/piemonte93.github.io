@@ -99,20 +99,20 @@ forEach() 반복문을 사용할 땐 안에 function(){} 콜백함수를 집어�
 <br>
 <span style="color:#EBE1AB">Q. 위의 코드에서 this를 출력하면 무엇이 나올까?</span>
 > <details>
->    <summary>뭐가 나오냐면</summary>
->    <br>
->    바로 답보지말고 한참동안 생각을 해보도록 하자.<br>
->    생각이 안나면 지금까지 this의 1,2,3,4번 뜻을 각각 대입해 봐라.<br>
->    그럼 뭘까.<br>
->    <br>
->    4번뜻에 의하면..eventlistener 안에서 쓴건 아니다.<br>
->    eventlistener 내부는 맞지만 그 안에서 function을 하나 더 만났기 때문에 의미가 변한다.<br>
->    3번 뜻에 의하면.. constructor는 아닌거 같다.<br>
->    실은 this의 1번이나 2번 뜻이 맞다.<br>
->    저렇게 쌩으로 있는 콜백함수는 그냥 일반함수랑 똑같기 때문에 window가 출력된다.<br>
->    <br>
->    <br>
->    this의 값은 this가 어떤 함수안에 들어있는지만 잘 체크하면 바로 알 수 있다.
+> <summary>뭐가 나오냐면</summary>
+> <br>
+> 바로 답보지말고 한참동안 생각을 해보도록 하자.<br>
+> 생각이 안나면 지금까지 this의 1,2,3,4번 뜻을 각각 대입해 봐라.<br>
+> 그럼 뭘까.<br>
+> <br>
+> 4번뜻에 의하면..eventlistener 안에서 쓴건 아니다.<br>
+> eventlistener 내부는 맞지만 그 안에서 function을 하나 더 만났기 때문에 의미가 변한다.<br>
+> 3번 뜻에 의하면.. constructor는 아닌거 같다.<br>
+> 실은 this의 1번이나 2번 뜻이 맞다.<br>
+> 저렇게 쌩으로 있는 콜백함수는 그냥 일반함수랑 똑같기 때문에 window가 출력된다.<br>
+> <br>
+> <br>
+> this의 값은 this가 어떤 함수안에 들어있는지만 잘 체크하면 바로 알 수 있다.
 > </details>
 <br>
 <br>
