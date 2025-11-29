@@ -9,9 +9,9 @@ image:
 categories:
   - frontend
   - javascript
-description: |
-  '저번 시간 this 의미 정리를 하자면
-  1. 그냥 일반 함수에서 쓰면 window
+description: >
+  '저번 시간 this 의미 정리를 하자면 <br>
+  1. 그냥 일반 함수에서 쓰면 window <br>
   2. 오브젝트 내의 함수(메소드)에서 쓰면 함수를 동작시키는 오브젝트가 출력된다고 배웠다. 이번엔 다른 this 키워드의 의미들을 알아보자'
 ---
 <br>
