@@ -69,44 +69,37 @@ function이라는 길고 복잡한 키워드 대신에<br>
 <span style="color:#EBE1AB">그리고 arrow function을 사용하면 함수 본연의 </span><span style="color:red">입출력 기능</span><span style="color:#EBE1AB">을 아주 직관적으로 잘 표현해 준다.</span><br>
 <br>
 <br>
-<details>
-<summary>입출력 기능이 뭔소리?</summary>
-함수가 뭔지부터 보자.<br>
-함수는 수학에서 온 개념이다.<br>
-원래 함수는 뭐 숫자를 집어넣으면 뭔가 다른 숫자를 배출하는 블랙박스같은 역할을 한다.<br>
-
-![function1 image](../../../assets/img/img-folder/input_output1.png)
+> <details>
+> <summary>입출력 기능이 뭔소리?</summary>
+> 함수가 뭔지부터 보자.<br>
+> 함수는 수학에서 온 개념이다.<br>
+> 원래 함수는 뭐 숫자를 집어넣으면 뭔가 다른 숫자를 배출하는 블랙박스같은 역할을 한다.<br>
+> ![function1 image](../../../assets/img/img-folder/input_output1.png)
 <br>
-
-위 그림처럼 input을 집어넣으면 output을 출력해주는 박스가 바로 함수다.<br>
-<br>
-실은 함수개념은 중학교 수학시간에 배운다.<br>
-<span style="color:#EBE1AB">문제)f(x) = x + 2 이다. 그럼 f(2)는 뭘까?</span><br>
-답은 4이다.<br>
-<br>
-f(x) 이게 함수다.<br>
-아까 박스처럼 그림으로 표현하면 이렇다.<br>
-
+> 위 그림처럼 input을 집어넣으면 output을 출력해주는 박스가 바로 함수다.<br>
+> <br>
+> 실은 함수개념은 중학교 수학시간에 배운다.<br>
+> <span style="color:#EBE1AB">문제)f(x) = x + 2 이다. 그럼 f(2)는 뭘까?</span><br>
+> 답은 4이다.<br>
+> <br>
+> f(x) 이게 함수다.<br>
+> 아까 박스처럼 그림으로 표현하면 이렇다.<br>
 > ![function2 image](../../../assets/img/img-folder/input_output2.png)
-<br>
-
-위에선 x를 집어넣으면 x + 2 를 출력해주는 함수를 만들어 쓰고 있던 것이다.<br>
-<br>
-<br>
-<br>
-그럼 프로그래밍에선 어떨까? 2를 집어넣으면 x + 2를 출력해주는 함수를 어떻게 만들어 쓸까?<br>
-
-```js
-function 더해주세요(x){
- return x + 2
-}
-```
-
-이런 문법을 이용해서 만들어 사용한다.<br>
-함수의 소괄호안에는 input역할을 하는 파라미터가 있고<br>
-함수내에 return 이라는 것은 output 역할을 하는 키워드이다.<br>
-그럼 이제 더해주세요(2); 이렇게 사용하면 4가 이 자리에 남게 되는 것이다.<br>
-<span style="color:#EBE1AB">소괄호에 뭔가 집어넣으면 return을 이용해 뭔가 뱉어내는 것</span><br>
-이게 바로 함수의 입출력 기능이다.<br>
-
-</details>
+> <br>
+> 위에선 x를 집어넣으면 x + 2 를 출력해주는 함수를 만들어 쓰고 있던 것이다.<br>
+> <br>
+> <br>
+> <br>
+그럼 프로그래밍에선 어떨까? 2를 집어넣으면 x + 2를 출력해주는 함수를 어떻게 만들어 쓸까?> <br>
+> ```js
+> function 더해주세요(x){
+>  return x + 2
+> }
+> ```
+> 이런 문법을 이용해서 만들어 사용한다.<br>
+> 함수의 소괄호안에는 input역할을 하는 파라미터가 있고<br>
+> 함수내에 return 이라는 것은 output 역할을 하는 키워드이다.<br>
+> 그럼 이제 더해주세요(2); 이렇게 사용하면 4가 이 자리에 남게 되는 것이다.<br>
+> <span style="color:#EBE1AB">소괄호에 뭔가 집어넣으면 return을 이용해 뭔가 뱉어내는 것</span><br>
+> 이게 바로 함수의 입출력 기능이다.<br>
+> </details>
