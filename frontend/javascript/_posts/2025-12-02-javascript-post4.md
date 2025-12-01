@@ -69,6 +69,7 @@ function이라는 길고 복잡한 키워드 대신에<br>
 <span style="color:#EBE1AB">그리고 arrow function을 사용하면 함수 본연의 </span><span style="color:red">입출력 기능</span><span style="color:#EBE1AB">을 아주 직관적으로 잘 표현해 준다.</span><br>
 <br>
 <br>
+
 > <details>
 > <summary>입출력 기능이 뭔소리?</summary>
 > 함수가 뭔지부터 보자.<br>
