@@ -70,7 +70,7 @@ function이라는 길고 복잡한 키워드 대신에<br>
 <br>
 <br>
 
-<details>
+> <details>
 
 > <summary>입출력 기능이 뭔소리?</summary>
 > 함수가 뭔지부터 보자.<br>
@@ -108,4 +108,4 @@ function이라는 길고 복잡한 키워드 대신에<br>
 > 그럼 이제 더해주세요(2); 이렇게 사용하면 4가 이 자리에 남게 되는 것이다.<br>
 > <span style="color:#EBE1AB">소괄호에 뭔가 집어넣으면 return을 이용해 뭔가 뱉어내는 것</span><br>
 > 이게 바로 함수의 입출력 기능이다.<br>
-</details>
+> </details>
