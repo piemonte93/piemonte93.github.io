@@ -74,8 +74,10 @@ function이라는 길고 복잡한 키워드 대신에<br>
 > 함수가 뭔지부터 보자.<br>
 > 함수는 수학에서 온 개념이다.<br>
 > 원래 함수는 뭐 숫자를 집어넣으면 뭔가 다른 숫자를 배출하는 블랙박스같은 역할을 한다.<br>
+
 > ![function1 image](../../../assets/img/img-folder/input_output1.png)
 <br>
+
 > 위 그림처럼 input을 집어넣으면 output을 출력해주는 박스가 바로 함수다.<br>
 > <br>
 > 실은 함수개념은 중학교 수학시간에 배운다.<br>
@@ -84,7 +86,9 @@ function이라는 길고 복잡한 키워드 대신에<br>
 > <br>
 > f(x) 이게 함수다.<br>
 > 아까 박스처럼 그림으로 표현하면 이렇다.<br>
+
 > ![function2 image](../../../assets/img/img-folder/input_output2.png)
+
 > <br>
 > 위에선 x를 집어넣으면 x + 2 를 출력해주는 함수를 만들어 쓰고 있던 것이다.<br>
 > <br>
