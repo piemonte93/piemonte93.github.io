@@ -207,7 +207,8 @@ window라는게 출력된다.<br>
 this값은 함수를 만나면 항상 변하는데 arrow function 안에서는 변하지 않고 밖에 있던 this를 그대로 쓴다.<br>
 (오브젝트 밖에 있던 this는 window이다.)<br>
 </details>
-
+<br>
+<br>
 왜냐면 arrow function은 외부에 있던 this를 그대로 내부로 가져와서 사용하는 함수이기 때문이다.<br>
 항상 장점은 아니다. 내가 예측하던 this값과 달라질 수도 있으니 단점이 될 수 있다.<br>
 끝이다. 더 알것도 없다.<br>
