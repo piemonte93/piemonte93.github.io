@@ -106,3 +106,112 @@ function 더해주세요(x){
 <span style="color:#EBE1AB">소괄호에 뭔가 집어넣으면 return을 이용해 뭔가 뱉어내는 것</span><br>
 이게 바로 함수의 입출력 기능이다.<br>
 </details>
+<br>
+<br>
+<br>
+그래서 arrow function을 쓰면 입출력기능이 쉽고 예쁘게 표현되지 않나.
+<br>
+
+~~~js
+var 두배만들기 = (x) => { return x * 2}
+
+console.log( 두배만들기(4) );
+console.log( 두배만들기(8) );
+~~~
+<br>
+숫자를 넣으면 2배를 해주는 함수를 하나 만들었다.<br>
+함수 표현식 자체가 x가 x * 2가 됩니다~ 라고 말하는것 같은가?<br>
+매우 이해하기 쉬워진다.<br>
+이게 장점1 이다.<br>
+<br>
+<br>
+<br>
+<span style="color:#EBE1AB">왜 쓰냐면 2. 소괄호 생략이 가능하다.</span><br>
+<br>
+파라미터가 하나라면 소괄호를 생략할 수 있다.<br>
+
+~~~js
+var 두배만들기 = x => { return x * 2 }
+
+console.log( 두배만들기(4) );
+console.log( 두배만들기(8) );
+~~~
+
+이렇게 해도 된다는 소리이다.
+<br>
+<br>
+<br>
+<span style="color:#EBE1AB">왜 쓰냐면 3. 중괄호 생략이 가능하다.</span><br>
+<br>
+중괄호 안에 return 한줄 뿐이라면 중괄호와 return도 생략가능하다.<br>
+
+~~~js
+var 두배만들기 = x => x * 2
+
+console.log( 두배만들기(4) );
+console.log( 두배만들기(8) );
+~~~
+
+생략하니 이제 x가 어떻게 변하는 함수인지 <span style="color:red">입출력기능</span>이 바로 한눈에 들어온다.<br>
+원래 {} 중괄호 끝날 땐 세미콜론 안쳐도 잘 되는데<br>
+생략할 땐 매너있게 세미콜론은 적어주자.<br>
+<br>
+<br>
+<br>
+<br>
+
+## <span style="color:#EBE1AB">Arrow Function 을 쓰면 내부에서 this값을 쓸 때 밖에 있던 this값을 그대로 사용한다.</span><br>
+<br>
+함수를 쓸때...함수가 쓰인 위치에 따라서 내부의 this값이 변한다고 저번시간에 배웠다.<br>
+근데 arrow function은 어디서든 쓰든 간에 내부의 this값을 변화시키지 않는다.<br>
+그러니깐 바깥에 있던 this의 의미를 그대로 내부에서도 사용하는 함수가 바로 arrow function이라는 함수이다.<br>
+(이게 장점 4이자 arrow function을 쓰는 핵심 이유이다.)<br>
+<br>
+<br>
+<br>
+예시를 보자.<br>
+<br>
+
+```js
+var 오브젝트1 = {
+  함수 : function(){ console.log(this) }
+}
+
+오브젝트1.함수()
+```
+위의 코드는 실행하면 무슨 결과가 나올까?<br>
+this값을 출력하라고 한다. this가 뭘까?<br>
+함수()를 가지고 있는 오브젝트인 오브젝트1이 콘솔창에 출력될 것이다.<br>
+<br>
+<br>
+<br>
+그럼 arrow function을 사용하면 어떻게 될까?<br>
+<br>
+
+```js
+var 오브젝트1 = {
+  함수 : () => { console.log(this) }
+}
+
+오브젝트1.함수()
+```
+위의 코드는 실행하면 무슨 결과가 나올까?<br>
+
+<details>
+<summary>안알랴줌</summary>
+window라는게 출력된다.<br>
+여기선 this가 window다.<br>
+<br>
+<br>
+왜 함수의 주인인 오브젝트1이 출력되지 않나면...<br>
+this값은 함수를 만나면 항상 변하는데 arrow function 안에서는 변하지 않고 밖에 있던 this를 그대로 쓴다.<br>
+(오브젝트 밖에 있던 this는 window이다.)<br>
+</details>
+
+왜냐면 arrow function은 외부에 있던 this를 그대로 내부로 가져와서 사용하는 함수이기 때문이다.<br>
+항상 장점은 아니다. 내가 예측하던 this값과 달라질 수도 있으니 단점이 될 수 있다.<br>
+끝이다. 더 알것도 없다.<br>
+이제 개발할 때 심심하면 arrow function 열심히 사용하길 바란다.<br>
+<br>
+하지만 this의 뜻이 달라지는 것 처럼 읿반 function과 용도가 완전 같지 않기 때문에<br>
+일반 function을 항상 대체할 수 있는 문법이 아니다. 그것만 주의하자.
