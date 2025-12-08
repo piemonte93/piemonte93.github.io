@@ -79,7 +79,7 @@ var 자료 = {
 위처럼 자료.전부더하기()라고 쓰면 <span style="color:#EBE1AB">자료.data</span> 안에 있는 모든 숫자를 더해서 콘솔창에 출력해주어야 한다.<br>
 (아마 15가 뜨겠지?)<br>
 <span style="color:#EBE1AB">Q. 어떻게 코드를 짜면 될까?</span><br>
-<span style="color:#EBE1AB">조건) 자료 object 줄괄호 내에 코드 작성 금지</span><br>
+<span style="color:#EBE1AB">조건) 자료 object 중괄호 내에 코드 작성 금지</span><br>
 <br>
 <details>
 <summary>답안</summary>
