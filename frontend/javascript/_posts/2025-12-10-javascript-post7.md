@@ -67,12 +67,13 @@ function 함수() {
 ```
 <br>
 
-<div style="background-color: #313436; padding: 30px;" markdown="1">
+<div style="padding: 30px;">
 <details>
 <summary>뭘까요</summary>
 콘솔창에 첫째로는 undefined가 출력되고<br>
 둘째로는 Kim이 출력된다.<br>
 왜냐면 Hoisting 때문에<br>
+<div markdown="1">
 
 ```js
 var 이름;
@@ -80,6 +81,7 @@ console.log(이름);
 이름 = 'Kim';
 console.log(이름);
 ```
+</div>
 
 이런 순서로 코드가 실행되기때문이다.<br>
 <br>
