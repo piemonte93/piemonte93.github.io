@@ -66,7 +66,7 @@ function 함수() {
 </script>
 ```
 <br>
-<div style="background-color: #313436; padding: 30px;" markdown="1">
+<div style="background-color: #313436; padding: 30px;", markdown="1">
 <details>
 <summary>뭘까요</summary>
 콘솔창에 첫째로는 undefined가 출력되고<br>
