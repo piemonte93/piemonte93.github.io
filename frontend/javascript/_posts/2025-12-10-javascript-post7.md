@@ -67,7 +67,7 @@ function 함수() {
 ```
 <br>
 
-<details class="highlighter-rouge">
+<details class="highlighter-rouge" style="padding: 10px; border-radius: 6px;">
 <summary>뭘까요</summary>
 콘솔창에 첫째로는 undefined가 출력되고<br>
 둘째로는 Kim이 출력된다.<br>
