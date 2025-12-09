@@ -58,32 +58,32 @@ menu:
     url:           /frontend/
     submenu:
       - title:      HTML CSS
-        url:        /htmlcss/
-      - title:      JAVASCRIPT
-        url:        /javascript/
-      - title:      REACT
-        url:        /react/
+        url:        /frontend/htmlcss/
+      - title:      Javascript
+        url:        /frontend/javascript/
+      - title:      React
+        url:        /frontend/react/
   - title:         BACKEND
     url:           /backend/
     submenu:
-      - title:      SPRING
-        url:        /spring/
-      - title:      NODEJS
-        url:        /nodejs/
-      - title:      FLASK DJANGO
-        url:        /flaskdjango/
+      - title:      Spring
+        url:        /backend/spring/
+      - title:      Node.js
+        url:        /backend/nodejs/
+      - title:      Flask Django
+        url:        /backend/flaskdjango/
   - title:         DATABASE
     url:           /database/
     submenu:
-      - title:     MYSQL
-        url:       /mysql/
+      - title:     Mysql
+        url:       /database/mysql/
   - title:         FULL STACK
     url:           /fullstack/
     submenu:
-      - title:     TYPESCRIPT
-        url:       /typescript/
-      - title:     NEXTJS
-        url:       /nextjs/
+      - title:     Typescript
+        url:       /fullstack/typescript/
+      - title:     Next.js
+        url:       /fullstack/nextjs/
   - title :        이론 정리
     url:           /theory/
   - title:         일상
