@@ -60,30 +60,30 @@ menu:
       - title:      HTML CSS
         url:        /htmlcss/
       - title:      Javascript
-        url:        /javascript/
+        url:        /frontend/javascript/
       - title:      React
-        url:        /react/
+        url:        /frontend/react/
   - title:         BACKEND
     url:           /backend/
     submenu:
       - title:      Spring
-        url:        /spring/
+        url:        /backend/spring/
       - title:      Node.js
-        url:        /nodejs/
+        url:        /backend/nodejs/
       - title:      Flask Django
-        url:        /flaskdjango/
+        url:        /backend/flaskdjango/
   - title:         DATABASE
     url:           /database/
     submenu:
       - title:     Mysql
-        url:       /mysql/
+        url:       /database/mysql/
   - title:         FULL STACK
     url:           /fullstack/
     submenu:
       - title:     Typescript
-        url:       /typescript/
+        url:       /fullstack/typescript/
       - title:     Next.js
-        url:       /nextjs/
+        url:       /fullstack/nextjs/
   - title :        이론 정리
     url:           /theory/
   - title:         일상
