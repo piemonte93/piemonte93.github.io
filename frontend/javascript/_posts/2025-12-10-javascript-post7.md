@@ -239,12 +239,10 @@ alert 이런것도 window에 보관된 애들이기 때문에 window.alert('안�
 </script>
 ```
 <br>
-<div style="background-color: #313436; padding: 30px;">
 <details>
-<summary>답 펼쳐보기 전에 잘 생각해보도록 하자. 함정이 있을 수 있음</summary>
+<summary style="cursor: pointer; font-weight: bold; padding: 5px;">답 펼쳐보기 전에 잘 생각해보도록 하자. 함정이 있을 수 있음</summary>
 
 실은 함정없음<br>
 b는 2라는 값이 출력된다.<br>
 let b = 3; 이 부분은 안쪽 if 내에서만 존재하는 놈이니 바깥의 console.log(b)와는 무관하다.
 </details>
-</div>
