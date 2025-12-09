@@ -66,9 +66,8 @@ function 함수() {
 </script>
 ```
 <br>
-<div style="background-color: #313436; padding: 30px;" >
+<div style="background-color: #313436; padding: 30px;" markdown="1">
 <details>
-<div markdown = "1">
 <summary>뭘까요</summary>
 콘솔창에 첫째로는 undefined가 출력되고<br>
 둘째로는 Kim이 출력된다.<br>
@@ -86,7 +85,6 @@ undefined라는건 변수가 선언은 되었는데 값을 아무것도 할당�
 일종의 자료형같은 것인데 그냥 <span style="color:#EBE1AB">정해지지않은 값</span>이라고 생각하면 된다.<br>
 하지만 let,const 변수의 경우 Hoisting이 일어나긴 하는데 약간 이상한 방식으로 일어난다.<br>
 그건 연습문제 강의에서 발견할 수 있다.
-</div>
 </details>
 </div>
 <br>
