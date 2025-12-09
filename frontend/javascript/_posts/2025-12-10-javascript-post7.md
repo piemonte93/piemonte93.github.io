@@ -68,11 +68,13 @@ function 함수() {
 <br>
 <div style="background-color: #313436; padding: 30px;" >
 <details>
-<summary>뭘까요</summary>
-콘솔창에 첫쨰로는 undefined가 출력되고<br>
+<summary>
+<div markdown = "1">뭘까요</div>
+</summary>
+<div markdown = "1">
+콘솔창에 첫째로는 undefined가 출력되고<br>
 둘째로는 Kim이 출력된다.<br>
 왜냐면 Hoisting 때문에<br>
-<div markdown = "1">
 
 ```js
 var 이름;
@@ -80,13 +82,13 @@ console.log(이름);
 이름 = 'Kim';
 console.log(이름);
 ```
-</div>
 이런 순서로 코드가 실행되기때문이다.<br>
 <br>
 undefined라는건 변수가 선언은 되었는데 값을 아무것도 할당하지 않았을 때 undefined가 출력된다.<br>
 일종의 자료형같은 것인데 그냥 <span style="color:#EBE1AB">정해지지않은 값</span>이라고 생각하면 된다.<br>
 하지만 let,const 변수의 경우 Hoisting이 일어나긴 하는데 약간 이상한 방식으로 일어난다.<br>
 그건 연습문제 강의에서 발견할 수 있다.
+</div>
 </details>
 </div>
 <br>
@@ -239,6 +241,7 @@ alert 이런것도 window에 보관된 애들이기 때문에 window.alert('안�
 <div style="background-color: #313436; padding: 30px;">
 <details>
 <summary>답 펼쳐보기 전에 잘 생각해보도록 하자. 함정이 있을 수 있음</summary>
+
 실은 함정없음<br>
 b는 2라는 값이 출력된다.<br>
 let b = 3; 이 부분은 안쪽 if 내에서만 존재하는 놈이니 바깥의 console.log(b)와는 무관하다.
