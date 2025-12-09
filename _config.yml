@@ -321,7 +321,7 @@ hydejack:
 
 collections:
   featured_categories:
-    permalink:         /:name/
+    permalink:         /:path/
     output:            true
 
   featured_tags:
