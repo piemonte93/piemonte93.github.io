@@ -66,6 +66,7 @@ function 함수() {
 </script>
 ```
 <br>
+
 <div style="background-color: #313436; padding: 30px;" markdown="1">
 <details>
 <summary>뭘까요</summary>
@@ -79,6 +80,7 @@ console.log(이름);
 이름 = 'Kim';
 console.log(이름);
 ```
+
 이런 순서로 코드가 실행되기때문이다.<br>
 <br>
 undefined라는건 변수가 선언은 되었는데 값을 아무것도 할당하지 않았을 때 undefined가 출력된다.<br>
