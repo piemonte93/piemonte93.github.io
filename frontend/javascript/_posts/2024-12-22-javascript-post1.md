@@ -7,8 +7,8 @@ date: 2024-12-22 23:47:47 +0900
 image: 
   path: https://blog.logrocket.com/wp-content/uploads/2021/05/javascript-svg-canvas.png
 categories:
-  - frontend
-  - javascript
+  - FRONTEND
+  - Javascript
 description: >
   'Canvas API를 이용하여 Javascript만으로 그림을 그릴수가 있다.'
 ---
