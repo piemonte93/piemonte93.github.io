@@ -1,0 +1,162 @@
+---
+layout: post
+related_posts:
+  - /frontend/javascript/
+title: "변수 총정리 1. var let const와 선언, 할당, 범위"
+date: 2025-12-09 20:43:53 +0900
+image:
+  path: "/assets/img/img-folder/js-img.jpg"
+categories:
+  - frontend
+  - javascript
+description: >
+    '다시는 문법책 안봐도 될 정도로 변수문법을 정리 해보도록 하자'
+---
+<br>
+
+## <span style="color:#EBE1AB">자바스크립트 변수는 이렇게 쓴다</span><br>
+<br>
+<br>
+
+```js
+var 이름 = 'Kim';
+```
+<br>
+변수는 자료를 임시로 저장하는 공간이다.
+1. var 이라는 키워드 오른쪽에 작명을 하고, 변수에 저장할 자료를 등호로 집어 넣어주면 된다.<br>
+2. 오브젝트, 어레이, 함수 등 모든 자료들을 담을 수 있다.<br>
+3. 그리고 <span style="color:#EBE1AB">var 이름</span>이라는 부분은 선언, <span style="color:#EBE1AB">이름 = kim</span> 이라는 부분은 값 할당이라고 전문 용어로 표현한다. 보통 변수만들 땐 두개를 동시에 사용한다.<br>
+4. 그리고 변수를 만들 땐 var, let, const 라는 3개 키워드를 이용가능하다.<br>
+3개 키워드마다 특징이 있다. 변수의 <span style="color:#EBE1AB">선언, 할당, 범위</span>에서 차이가 좀 있는데 같이 알아보도록 하자.<br>
+<br>
+<br>
+<br>
+<br>
+
+## <span style="color:#EBE1AB">변수의 선언</span><br>
+<br>
+<br>
+
+```js
+var 이름;
+let 나이;
+const 성별;
+```
+<br>
+이렇게 var, let, const 키워드를 이용해 변수를 만들겠다고 선언할 수 있다. (등호는 안써도 변수는 만들어진다)<br>
+그런데 var 키워드는 재선언이 가능하고<br>
+let, const 키워드는 재선언이 불가능하다.<br>
+<br>
+<br>
+
+```js
+let 나이;
+let 나이; //에러
+
+const 성별 = '여자';
+const 성별 = '남자'; //에러
+```
+<br>
+let, const로 만들면 이렇게 같은 이름의 변수를 두번 이상 재선언할 수 없다. 에러가 난다.<br>
+나중에 변수 이름을 실수로 중복해서 만드는 실수를 방지해주는 고마운 기능이다.<br>
+<br>
+<br>
+<br>
+<br>
+
+## <span style="color:#EBE1AB">변수의 값 할당</span><br>
+<br>
+<br>
+변수에 값을 할당한다는게 뭔소리냐면
+
+```js
+var 이름;
+이름 = 'Kim';
+```
+<br>
+▲ 둘째줄에서 이렇게 만들어놓은 변수에 'Kim'이라는 값을 집어넣는걸 할당이라고 한다.<br>
+<br>
+<br>
+<br>
+할당도 선언과 동시에 할수 있다.<br>
+<br>
+
+```js
+var 이름 = 'Kim';
+```
+<br>
+▲선언과 할당을 동시에 하는 모습이다.<br>
+<br>
+<br>
+<br>
+근데 변수를 var, let으로 만들면 재할당이 가능하고 const로 만들면 값 재할당이 불가능하다.<br>
+const로 변수 만들면 나중에 등호를 이용해 값 변경하는게 안된다는 소리이다.<br>
+<br>
+
+```js
+let 이름 = 'Kim';
+이름 = 'Park'; // 가능
+
+const 나이 = 30;
+나이 = 40; // 에러
+```
+<br>
+const는 애초에 constant의 약자로 바뀌지 않는 일정한 값을 뜻합니다.<br>
+바뀌면 큰일날 값을 저장하고 싶을 때 사용하면 좋다.<br>
+<br>
+<br>
+<br>
+<br>
+* const 변수에 오브젝트를 담으면 오브젝트 내의 데이터는 변경 가능하다.<br>
+<br>
+
+```js
+const 오브젝트 = { 이름 : 'Kim' }
+오브젝트.이름 = 'Park'; // 가능
+```
+<br>
+위의 예제는 엄밀히 말하면 변수를 재할당한게 아니기 때문에 가능하다.<br>
+완전 변경불가능한 오브젝트를 만들고 싶다면<br>
+Object.freeze()라는 자바스크립트 기본함수가 있다.<br>
+Object.freeze() 소괄호에 오브젝트를 담으면 불변의 Object가 완성된다.<br>
+(하지만 오브젝트 내의 오브젝트까지 freeze해주진 않는다)<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+## <span style="color:#EBE1AB">변수의 범위</span><br>
+<br>
+변수를 만들면 존재범위가 있다.<br>
+var 변수는 존재범위가 function이다.<br>
+let, const 변수는 존재범위가 거의 모든 {중괄호}이다. (for, if, function 등)<br>
+<br>
+<br>
+
+```js
+function 함수() {
+    var 이름 = 'Kim';
+    console.log(이름); // 가능
+}
+
+console.log(이름); // 에러
+```
+<br>
+▲ 위의 예제처럼 var 변수는 function 내에서 만들면 function 내에서만 쓸 수 있다.<br>
+function 바깥에서 부르면 없다고 나온다.<br>
+<br>
+<br>
+<br>
+
+```js
+if ( 1 == 1 ) {
+    let 이름 = 'Kim';
+    console.log(이름); // 가능
+}
+
+console.log(이름); // 에러
+```
+<br>
+▲ 위의 예제처럼 let 변수는 {} 중괄호 내에서 만들면 중괄호 내에서만 쓸 수 있다.<br>
+중괄호 바깥에서 부르면 없다고 나온다.
