@@ -66,7 +66,7 @@ function 함수() {
 </script>
 ```
 <br>
-<div style="background-color: #313436;">
+<div style="background-color: #313436;" padding="10px">
 <details>
 <summary>뭘까요</summary>
 콘솔창에 첫쨰로는 undefined가 출력되고<br>
@@ -236,7 +236,7 @@ alert 이런것도 window에 보관된 애들이기 때문에 window.alert('안�
 </script>
 ```
 
-<div style="background-color: #313436;">
+<div style="background-color: #313436; padding: 10px;">
 <details>
 <summary>답 펼쳐보기 전에 잘 생각해보도록 하자. 함정이 있을 수 있음</summary>
 실은 함정없음<br>
